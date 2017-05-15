@@ -214,23 +214,25 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>Comment</key>
-		<string>LCD 1600x900</string>
-		<key>CustomEDID</key>
-                <data>
-                AP///////wAw5OICAAAAAAEUAQOAHxF44jOFmVZVkScXUFQAAAABAQEBAQEB
-                AQEBAQEBAQEBgCVAgGCEGjAwIDUANq4QAAAYAAAAAAAAAAAAAAAAAAAAAAAA
-                AAAA/gBMZW5vdm8KICAgICAgAAAA/gAxNjAweDkwMAogICAgAK0=
-                </data>
-		<key>DualLink</key>
-		<string>1</string>
+		<key>EDID</key>
+		<dict>
+			<key>Comment</key>
+			<string>LCD 1600x900</string>
+			<key>Custom</key>
+			<data>
+			AP///////wAw5OICAAAAAAEUAQOAHxF44jOFmVZVkScXUFQAAAAB
+			AQEBAQEBAQEBAQEBAQEBgCVAgGCEGjAwIDUANq4QAAAYAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAA/gBMZW5vdm8KICAgICAgAAAA/gAxNjAw
+			eDkwMAogICAgAK0=
+			</data>
+			<key>Inject</key>
+			<true/>
+		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
 			<true/>
 		</dict>
-		<key>InjectEDID</key>
-		<true/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -290,7 +292,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Replace 4th port with VGA</string>
+				<string>Patch Framebuffer Levels and Replace 4th port with VGA</string>
 				<key>Find</key>
 				<data>
 				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH

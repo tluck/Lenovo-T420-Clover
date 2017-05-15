@@ -42,6 +42,21 @@
 				ABEAAAAcACwAPwBRAGgAigCrAMwA+gE1AYEB3QJEAskD
 				WQPo
 				</data>
+				<key>F10T213e</key>
+				<data>
+				ABEAAACMANgBNgGPAf4CowNFA+cExwU1B1oJHAsTDZsQ
+				WRMS
+				</data>
+				<key>F10T313c</key>
+				<data>
+				ABEAAACMANgBNgGPAf4CowNFA+cExwU1B1oJHAsTDZsQ
+				WRMS
+				</data>
+				<key>F10T40e2</key>
+				<data>
+				ABEAAACMANgBNgGPAf4CowNFA+cExwU1B1oJHAsTDZsQ
+				WRMS
+				</data>
 			</dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleBacklight</string>

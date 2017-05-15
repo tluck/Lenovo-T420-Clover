@@ -214,17 +214,11 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>Comment</key>
-		<string>LCD 1366x768</string>
-		<key>DualLink</key>
-		<string>0</string>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
 			<true/>
 		</dict>
-		<key>InjectEDID</key>
-		<true/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -284,7 +278,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Replace 4th port with VGA</string>
+				<string>Patch Framebuffer Levels and Replace 4th port with VGA</string>
 				<key>Find</key>
 				<data>
 				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH

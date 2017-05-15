@@ -1,11 +1,10 @@
 #!/bin/bash
 
 export PATH="/bin:/usr/bin:/usr/sbin"
-dir=$( pwd )
-#f=$0
-#dir=${f%/*}
 
-if [[ "$f" == "$dir" ]]; then dir=. ; fi
+dir=${0%/*}
+if [[ "$dir" == "" ]]; then dir="."; fi
+cd "$dir"
 
 vol="$@"
 if [[ "$vol" == "" ]];
@@ -41,7 +40,6 @@ echo The target OS is: $ver "($OSXv)"
 orig=../kexts-orig
 
 echo "------------------------------------------------------------------------"
-#cd "$dir"
 test -d $orig || sudo mkdir -p $orig
 #
 # install all kexts to $dest
