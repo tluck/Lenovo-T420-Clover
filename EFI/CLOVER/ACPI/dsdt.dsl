@@ -2268,9 +2268,9 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
                             {
                                 "onboard-1"
                             }, 
-
-                            "layout-id", 
-                            Unicode ("\x0C"), 
+// tjl-fix - ID set by Clover - 12 for Normal, 13 for adding Dock Ports
+                            /* "layout-id", 
+                            Unicode ("\x0C"), */
                             "codec-id", 
                             Buffer (0x04)
                             {
