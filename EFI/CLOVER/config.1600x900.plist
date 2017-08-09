@@ -214,6 +214,8 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
+		<key>DualLink</key>
+		<integer>1</integer>
 		<key>EDID</key>
 		<dict>
 			<key>Comment</key>

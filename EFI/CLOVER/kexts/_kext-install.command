@@ -30,10 +30,11 @@ vol="$vol/"
 
 productVersion=$( /usr/libexec/PlistBuddy -c print "${vol}System/Library/CoreServices/SystemVersion.plist" | grep ProductVersion )
 OSXv=${productVersion#*= }
-ver=10.12
+ver=10.13
 if [[ $OSXv == *"10.10"* ]]; then ver=10.10 ; fi
 if [[ $OSXv == *"10.11"* ]]; then ver=10.11 ; fi
 if [[ $OSXv == *"10.12"* ]]; then ver=10.12 ; fi
+if [[ $OSXv == *"10.13"* ]]; then ver=10.13 ; fi
 
 echo The target OS is: $ver "($OSXv)"
 
