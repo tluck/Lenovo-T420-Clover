@@ -48,11 +48,12 @@ plist=${targetdir}/AppleBacklightInjector.kext/Contents/Info.plist
 /usr/libexec/PlistBuddy -c "Delete ':DTXcode'" $plist
 /usr/libexec/PlistBuddy -c "Delete ':DTXcodeBuild'" $plist
 /usr/libexec/PlistBuddy -c "Delete ':OSBundleLibraries'" $plist
-/usr/libexec/PlistBuddy -c "Set ':CFBundleGetInfoString' '0.9.0, Copyright 2013 RehabMan Inc. All rights reserved.'" $plist
+/usr/libexec/PlistBuddy -c "Delete ':CFBundleExecutable'" $plist
+/usr/libexec/PlistBuddy -c "Set ':CFBundleGetInfoString' '0.9.2, Copyright 2017 RehabMan Inc. All rights reserved.'" $plist
 /usr/libexec/PlistBuddy -c "Set ':CFBundleIdentifier' 'org.rehabman.driver.AppleBacklightInjector'" $plist
 /usr/libexec/PlistBuddy -c "Set ':CFBundleName' 'AppleBacklightInjector'" $plist
-/usr/libexec/PlistBuddy -c "Set ':CFBundleShortVersionString' '0.9.0'" $plist
-/usr/libexec/PlistBuddy -c "Set ':CFBundleVersion' '0.9.0'" $plist
+/usr/libexec/PlistBuddy -c "Set ':CFBundleShortVersionString' '0.9.2'" $plist
+/usr/libexec/PlistBuddy -c "Set ':CFBundleVersion' '0.9.2'" $plist
 /usr/libexec/PlistBuddy -c "Set ':IOKitPersonalities:AppleIntelPanelA:IOProbeScore' 2500" $plist
 
 rm -R ${targetdir}/AppleBacklightInjector.kext/Contents/_CodeSignature

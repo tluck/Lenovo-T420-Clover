@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>17A352a</string>
+	<string>17A365</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
@@ -29,17 +29,17 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>9M189t</string>
+	<string>9A235</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>17A315g</string>
+	<string>17A360</string>
 	<key>DTSDKName</key>
 	<string>macosx10.13</string>
 	<key>DTXcode</key>
 	<string>0900</string>
 	<key>DTXcodeBuild</key>
-	<string>9M189t</string>
+	<string>9A235</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>FakeSMC</key>
@@ -99,11 +99,67 @@
 						ut7DNVAFEGM=
 						</data>
 					</array>
+					<key>ALI0</key>
+					<array>
+						<string>{ali</string>
+						<data>
+						BgECAA==
+						</data>
+					</array>
+					<key>ALRV</key>
+					<array>
+						<string>ui16</string>
+						<data>
+						AAE=
+						</data>
+					</array>
+					<key>ALV0</key>
+					<array>
+						<string>{alv</string>
+						<data>
+						AQEDtwCjABVq9A==
+						</data>
+					</array>
+					<key>CLKH</key>
+					<array>
+						<string>{clh</string>
+						<data>
+						AABwgAABGUA=
+						</data>
+					</array>
+					<key>CLKT</key>
+					<array>
+						<string>ui32</string>
+						<data>
+						AAByGw==
+						</data>
+					</array>
+					<key>EPCI</key>
+					<array>
+						<string>flag</string>
+						<data>
+						AQ==
+						</data>
+					</array>
 					<key>FNum</key>
 					<array>
 						<string>ui8</string>
 						<data>
 						AQ==
+						</data>
+					</array>
+					<key>LSOF</key>
+					<array>
+						<string>flag</string>
+						<data>
+						AQ==
+						</data>
+					</array>
+					<key>LSSB</key>
+					<array>
+						<string>{lso</string>
+						<data>
+						AQE=
 						</data>
 					</array>
 					<key>LsNM</key>
@@ -118,6 +174,27 @@
 						<string>{rev</string>
 						<data>
 						AQQKAAY=
+						</data>
+					</array>
+					<key>MOST</key>
+					<array>
+						<string>ui16</string>
+						<data>
+						gAM=
+						</data>
+					</array>
+					<key>MSDW</key>
+					<array>
+						<string>ui8</string>
+						<data>
+						AQ==
+						</data>
+					</array>
+					<key>MSPS</key>
+					<array>
+						<string>{msp</string>
+						<data>
+						AA==
 						</data>
 					</array>
 					<key>MSSD</key>
@@ -135,6 +212,25 @@
 						</data>
 					</array>
 					<key>NATJ</key>
+					<array>
+						<string>ui8</string>
+						<data>
+						AA==
+						</data>
+					</array>
+					<key>NATi</key>
+					<array>
+						<string>ui16</string>
+						<string>0000</string>
+					</array>
+					<key>NTOK</key>
+					<array>
+						<string>ui8</string>
+						<data>
+						AQ==
+						</data>
+					</array>
+					<key>NVPR</key>
 					<array>
 						<string>ui8</string>
 						<data>
@@ -163,6 +259,18 @@
 						<data>
 						ATAPAAAD
 						</data>
+					</array>
+					<key>RMde</key>
+					<array>
+						<string>char</string>
+						<data>
+						QQ==
+						</data>
+					</array>
+					<key>RPlt</key>
+					<array>
+						<string>ch8*</string>
+						<string>m82</string>
 					</array>
 					<key>RVBF</key>
 					<array>

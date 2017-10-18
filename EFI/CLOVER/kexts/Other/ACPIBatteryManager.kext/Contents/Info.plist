@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>17A358a</string>
+	<string>17B25c</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>ACPIBatteryManager</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.81.3, Copyright 2011 Apple Inc., RehabMan 2012</string>
+	<string>1.81.4, Copyright 2011 Apple Inc., RehabMan 2012</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.rehabman.driver.AppleSmartBatteryManager</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.81.3</string>
+	<string>1.81.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -27,21 +27,21 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.81.3</string>
+	<string>1.81.4</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>9M214v</string>
+	<string>9A235</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>17A350a</string>
+	<string>17A360</string>
 	<key>DTSDKName</key>
 	<string>macosx10.13</string>
 	<key>DTXcode</key>
 	<string>0900</string>
 	<key>DTXcodeBuild</key>
-	<string>9M214v</string>
+	<string>9A235</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>ACPI AC Adapter</key>

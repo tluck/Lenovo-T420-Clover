@@ -233,14 +233,14 @@
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
-		<key>AppleRTC</key>
+		<key>AppleIntelCPUPM</key>
 		<true/>
-		<key>AsusAICPUPM</key>
+		<key>AppleRTC</key>
 		<true/>
 		<key>Debug</key>
 		<false/>

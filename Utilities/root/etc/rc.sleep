@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# turn off ethernet
+#ethd=$( networksetup -listallhardwareports | awk '$3=="Ethernet" {getline; print $2}')
+status=$( networksetup -getnetworkserviceenabled Ethernet | tee /var/tmp/eth.status.txt )
+if [[ $status == "Enabled" ]]
+then
+networksetup -setnetworkserviceenabled Ethernet off
+fi
+
+sleep 1
+
+# turn off Wifi 
+wifi=$( networksetup -listallhardwareports | awk '$3=="Wi-Fi"    {getline; print $2}')
+status=$( networksetup -getairportpower $wifi | tee /var/tmp/wifi.status.txt )
+if [[ ${status##*: } == "On" ]]
+then
+networksetup -setairportpower $wifi off
+fi
+
+# turn off BT - to keep from getting KP on High Sierra 
+status=$( /usr/local/bin/blueutil status | tee /var/tmp/bt.status.txt )
+if [[ ${status##*: } == "on" ]]
+then
+/usr/local/bin/blueutil off
+fi
+
+exit
+
+# for usb wifi
+osascript -e 'quit app "Wireless Network Utility"'
+for f in /Applications/Wireless\ Network\ Utility.app/*off.rtl
+do
+echo "1" > "$f"
+done
+open -a "Wireless Network Utility"

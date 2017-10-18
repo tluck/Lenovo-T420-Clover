@@ -1,0 +1,16 @@
+--- CloverDaemon.orig	2017-01-16 11:25:54.000000000 -0500
++++ CloverDaemon	2017-01-16 11:26:25.000000000 -0500
+@@ -135,8 +135,8 @@
+ 
+ StartService # Launch @ boot
+ 
+-trap StopService SIGTERM # SIGTERM @ shutdown
+-while true; do
+-    sleep 86400 &  # Start the sleep process in background
+-    wait $!        # and wait to finish
+-done
++#trap StopService SIGTERM # SIGTERM @ shutdown
++#while true; do
++#    sleep 86400 &  # Start the sleep process in background
++#    wait $!        # and wait to finish
++#done

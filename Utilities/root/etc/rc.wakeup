@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# if ethernet was on/enabled before sleep/restart - renable it
+#ethd=$( networksetup -listallhardwareports | awk '$3=="Ethernet" {getline; print $2}')
+if [[ -f /var/tmp/eth.status.txt ]]
+then
+status=$(cat /var/tmp/eth.status.txt)
+	if [[ $status == "Enabled" ]]
+	then
+	echo networksetup -setnetworkserviceenabled Ethernet on
+	networksetup -setnetworkserviceenabled Ethernet on
+	fi
+rm /var/tmp/eth.status.txt
+fi
+
+# if wifi was on/enabled before sleep/restart - renable it
+if [[ -f /var/tmp/wifi.status.txt ]]
+then
+status=$(cat /var/tmp/wifi.status.txt)
+	if [[ ${status##*: } == "On" ]]
+	then
+	wifi=$( networksetup -listallhardwareports | awk '$3=="Wi-Fi"    {getline; print $2}')
+	echo networksetup -setairportpower $wifi on
+	networksetup -setairportpower $wifi on
+	fi
+rm /var/tmp/wifi.status.txt
+fi
+
+# if bt was on/enabled before sleep/restart - renable it
+if [[ -f /var/tmp/bt.status.txt ]]
+then
+status=$(cat /var/tmp/bt.status.txt)
+	if [[ ${status##*: } == "on" ]]
+	then
+	echo /usr/local/bin/blueutil on
+	/usr/local/bin/blueutil on
+	fi
+rm /var/tmp/bt.status.txt
+fi
+
+exit 
+
+# for usb wifi
+osascript -e 'quit app "Wireless Network Utility"'
+for f in /Applications/Wireless\ Network\ Utility.app/*off.rtl
+do
+echo "0" > "$f"
+done
+open -a "Wireless Network Utility"
