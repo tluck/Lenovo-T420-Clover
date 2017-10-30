@@ -338,6 +338,34 @@
 				AAAAAAAAAAAA
 				</data>
 			</dict>
+                        <dict>
+                                <key>Comment</key>
+                                <string>fix IO error ICH10 for 10.13, credit SunKi</string>
+                                <key>MatchOS</key>
+                                <string>10.13.x</string>
+                                <key>Disabled</key>
+                                <false/>
+                                <key>Name</key>
+                                <string>AppleAHCIPort</string>
+                                <key>Find</key>
+                                <data>RYX2D5XCiciD4P5mhcl4D4TSdQs=</data>
+                                <key>Replace</key>
+                                <data>iciD4P5mhckPmMFBCMyQkJCQdQs=</data>
+                        </dict>
+                        <dict>
+                                <key>Comment</key>
+                                <string>fix hotplug ICH10 for 10.13, credit SunKi</string>
+                                <key>MatchOS</key>
+                                <string>10.13.x</string>
+                                <key>Disabled</key>
+                                <false/>
+                                <key>Name</key>
+                                <string>AppleAHCIPort</string>
+                                <key>Find</key>
+                                <data>icglQGACAD1AIAAAdQyB4b9///+Ji1EBAAA=</data>
+                                <key>Replace</key>
+                                <data>kJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJA=</data>
+                        </dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
