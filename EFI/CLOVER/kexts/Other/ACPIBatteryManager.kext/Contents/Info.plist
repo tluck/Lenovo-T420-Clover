@@ -72,7 +72,7 @@
 				<key>EstimateCycleCountDivisor</key>
 				<integer>6</integer>
 				<key>FirstPollDelay</key>
-				<integer>4000</integer>
+				<integer>12000</integer>
 				<key>StartupDelay</key>
 				<integer>0</integer>
 				<key>UseDesignVoltageForCurrentCapacity</key>
