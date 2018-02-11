@@ -117,6 +117,12 @@
 			</dict>
 			<dict>
 				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>SataAhci</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
 		</array>
@@ -126,6 +132,8 @@
 		<string>0x06</string>
 		<key>SSDT</key>
 		<dict>
+			<key>DropOem</key>
+			<true/>
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
@@ -187,6 +195,22 @@
 	</array>
 	<key>GUI</key>
 	<dict>
+		<key>Custom</key>
+		<dict>
+			<key>Comment</key>
+			<string>Windows Entries</string>
+			<key>Entries</key>
+			<array>
+				<dict>
+					<key>FullTitle</key>
+					<string>Boot Windows 10</string>
+					<key>Type</key>
+					<string>Windows</string>
+					<key>Volume</key>
+					<string>your-GUID-for-EFI</string>
+				</dict>
+			</array>
+		</dict>
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
@@ -236,36 +260,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>change AD198B for Conexant 20672</string>
-				<key>Find</key>
-				<data>
-				ixnUEQ==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				blDxFA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
-				<key>Find</key>
-				<data>
-				AQAAdRc=
-				</data>
-				<key>MatchOS</key>
-				<string>10.10.x,10.11.x</string>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				AQAA6xc=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
 				<key>Find</key>
 				<data>
@@ -299,6 +293,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Patch Framebuffer Levels and Replace 4th port with VGA</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Find</key>
 				<data>
 				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
@@ -362,6 +358,22 @@
 				kJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJA=
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change AD198B for Conexant 20672</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				ixnUEQ==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				blDxFA==
+				</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -369,7 +381,7 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x77</string>
+		<string>0x3C3</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>

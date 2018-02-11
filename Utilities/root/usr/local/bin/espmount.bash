@@ -1,10 +1,13 @@
 #!/bin/bash
+
+function is_int() { return $(test "$@" -eq "$@" > /dev/null 2>&1); } 
+
 if [[ "$1" == "" ]]; 
 then
-    echo enter disk number
+    echo Enter the disk number or the volume name
     read n 
 else
-    n=$1
+    n="$1"
 fi;
 
 while [[ $# > 1 ]]
@@ -23,11 +26,20 @@ esac
 shift # past argument or value
 done
 
+if $(is_int "$n");
+then
+vol=disk$n
+else
+vol=$n
+fi
+
 # find esp of boot volume
 bvs=$( system_profiler SPSoftwareDataType | grep Volume )
 bv=${bvs#*: }
 lds=$( diskutil info $bv  |  grep "Part of"          | sed -e's/^.* disk/disk/' )
-pds=$( diskutil list $lds | egrep " Volume on| Store | Container $lds " | sed -e's/^.* disk/disk/' )
+pds1=$( diskutil list $lds | egrep " Volume on| Store " | sed -e's/^.* disk/disk/' )
+#pds2=$( diskutil list      | egrep " Container $lds" | sed -e's/^.* disk/disk/' )
+pds=${pds1}${pds2}
 if [[ $pds == '' ]]; 
 then
     pd=${lds}
@@ -37,8 +49,15 @@ fi
 besp=${pd#*disk}
 
 # find esp of requested volume
-lds=$( diskutil info disk$n |  grep "Part of"          | sed -e's/^.* disk/disk/' )
-pds=$( diskutil list $lds   | egrep " Volume on| Store | Container $lds " | sed -e's/^.* disk/disk/' )
+lds=$( diskutil info $vol |  grep "Part of"          | sed -e's/^.* disk/disk/' )
+if [[ $lds == "" ]];
+then
+	printf "*** Error - $vol not found\n"
+	exit 1
+fi
+pds1=$( diskutil list $lds | egrep " Volume on| Store " | sed -e's/^.* disk/disk/' )
+#pds2=$( diskutil list      | egrep " Container $lds" | sed -e's/^.* disk/disk/' )
+pds=${pds1}${pds2}
 if [[ $pds == '' ]]; 
 then
     pd=${lds}
@@ -47,12 +66,13 @@ else
 fi
 nesp=${pd#*disk}
 
-# if n is a LV vs PV use pd
-if [[ $n == ${lds/disk/} ]];
-then
+# if n is a LV  use the pd number
+#if [[ $n == ${lds/disk/} ]];
+#then
     n=$nesp
-fi
+#fi
 
+# if nesp is the boot volume use ESP as the name 
 if [[ $n == $besp ]]; then
 	p=/Volumes/ESP
 else

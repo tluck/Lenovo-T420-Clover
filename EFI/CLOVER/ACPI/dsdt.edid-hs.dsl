@@ -2310,32 +2310,32 @@ DefinitionBlock ("dsdt.edid-hs.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460
                     Store (Package ()
                         {
 // tjl-begin uncomment this section for use with high-res LCD 1600x900
-                          "AAPL00,DualLink", 
-                          Buffer (0x04)
-                          {     
-                              0x01, 0x00, 0x00, 0x00
-                          },    
-
-                          "AAPL00,override-no-connect", 
-                          Buffer (0x80)
-                          {     
-                              0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,
-                              0x30, 0xE4, 0xE2, 0x02, 0x00, 0x00, 0x00, 0x00,
-                              0x01, 0x14, 0x01, 0x03, 0x80, 0x1F, 0x11, 0x78,
-                              0xE2, 0x33, 0x85, 0x99, 0x56, 0x55, 0x91, 0x27,
-                              0x17, 0x50, 0x54, 0x00, 0x00, 0x00, 0x01, 0x01,
-                              0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,
-                              0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x80, 0x25,
-                              0x40, 0x80, 0x60, 0x84, 0x1A, 0x30, 0x30, 0x20,
-                              0x35, 0x00, 0x36, 0xAE, 0x10, 0x00, 0x00, 0x18,
-                              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                              0x00, 0x00, 0x00, 0x00, 0x00, 0xFE, 0x00, 0x4C,
-                              0x65, 0x6E, 0x6F, 0x76, 0x6F, 0x0A, 0x20, 0x20,
-                              0x20, 0x20, 0x20, 0x20, 0x00, 0x00, 0x00, 0xFE,
-                              0x00, 0x31, 0x36, 0x30, 0x30, 0x78, 0x39, 0x30,
-                              0x30, 0x0A, 0x20, 0x20, 0x20, 0x20, 0x00, 0xAD
-                          },
+                            "AAPL00,DualLink", 
+                            Buffer (0x04)
+                            {     
+                                0x01, 0x00, 0x00, 0x00
+                            },    
+  
+                            "AAPL00,override-no-connect", 
+                            Buffer (0x80)
+                            {     
+                                0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,
+                                0x30, 0xE4, 0x66, 0x03, 0x00, 0x00, 0x00, 0x00,
+                                0x00, 0x15, 0x01, 0x04, 0x90, 0x1F, 0x11, 0x78,
+                                0x02, 0xFC, 0x45, 0x95, 0x58, 0x55, 0x92, 0x28,
+                                0x20, 0x50, 0x54, 0x00, 0x00, 0x00, 0x01, 0x01,
+                                0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,
+                                0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x58, 0x2F,
+                                0x40, 0xF8, 0x61, 0x84, 0x3C, 0x30, 0xA0, 0x60,
+                                0x35, 0x00, 0x35, 0xAE, 0x10, 0x00, 0x00, 0x1A,
+                                0x90, 0x1F, 0x40, 0xF8, 0x61, 0x84, 0x3C, 0x30,
+                                0xA0, 0x60, 0x35, 0x00, 0x35, 0xAE, 0x10, 0x00,
+                                0x00, 0x1A, 0x00, 0x00, 0x00, 0xFE, 0x00, 0x33,
+                                0x4E, 0x50, 0x52, 0x36, 0x80, 0x31, 0x34, 0x30,
+                                0x57, 0x44, 0x32, 0x0A, 0x00, 0x00, 0x00, 0x00,
+                                0x00, 0x00, 0x41, 0x31, 0x9E, 0x01, 0x10, 0x00,
+                                0x00, 0x02, 0x01, 0x0A, 0x20, 0x20, 0x00, 0xA7
+                            },
 // tjl-end
                             "hda-gfx", 
                             Buffer (0x0A)
@@ -4511,32 +4511,32 @@ DefinitionBlock ("dsdt.edid-hs.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460
 // tjl-fix -- need to install RehabMan's ACPIPoller.kext  
 // tjl-fix -- or install HWMonitor.app with ACPISensors.kext set to continuously poll in background
 /* FAN control START */
-                        If (LGreaterEqual (Local0, 0x55)) // CPU Temp is >= 85C
-                        { Store (0x07, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 7 - Maximum Speed 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x50)) // CPU Temp is >= 80C
-                        { Store (0x06, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 6 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x4B)) // CPU Temp is >= 75C
-                        { Store (0x05, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 5 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x46)) // CPU Temp is >= 70C
-                        { Store (0x04, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 4 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x41)) // CPU Temp is >= 65C
-                        { Store (0x03, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 3 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x3C)) // CPU Temp is >= 60C
-                        { Store (0x02, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 2 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x01)) // CPU Temp is >= 01C
-                        { Store (0x01, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 1 - Lowest Speed 
-                        }
-                        }
-                        }
-                        }
-                        }
-                        }
+                          If (LGreaterEqual (Local0, 0x55)) // CPU Temp is >= 85C
+                          { Store (0x07, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 7 - Maximum Speed 
+                          Else {
+                          If (LGreaterEqual (Local0, 0x50)) // CPU Temp is >= 80C
+                          { Store (0x06, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 6 
+                          Else {
+                          If (LGreaterEqual (Local0, 0x4B)) // CPU Temp is >= 75C
+                          { Store (0x05, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 5 
+                          Else {
+                          If (LGreaterEqual (Local0, 0x46)) // CPU Temp is >= 70C
+                          { Store (0x04, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 4 
+                          Else {
+                          If (LGreaterEqual (Local0, 0x41)) // CPU Temp is >= 65C
+                          { Store (0x03, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 3 
+                          Else {
+                          If (LGreaterEqual (Local0, 0x3C)) // CPU Temp is >= 60C
+                          { Store (0x02, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 2 
+                          Else {
+                          If (LGreaterEqual (Local0, 0x01)) // CPU Temp is >= 01C
+                          { Store (0x01, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 1 - Lowest Speed 
+                          }
+                          }
+                          }
+                          }
+                          }
+                          }
 /* FAN control END */
                         Return (Local0)
                     }
