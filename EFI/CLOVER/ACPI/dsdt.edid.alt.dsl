@@ -18,7 +18,7 @@
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20150515 (538248469)
  */
-DefinitionBlock ("dsdt.edid.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
+DefinitionBlock ("dsdt.edid.alt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
 {
 
     External (_SB_.PCI0.SAT1.PRIM.GTME, UnknownObj)
@@ -4110,7 +4110,7 @@ DefinitionBlock ("dsdt.edid.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
                     })
 
 // tjl-begin - add this Method
-                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                    Method (XDSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         Store (Package (0x06)
                             {

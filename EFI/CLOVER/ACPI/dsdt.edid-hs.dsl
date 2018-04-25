@@ -4110,7 +4110,7 @@ DefinitionBlock ("dsdt.edid-hs.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460
                     })
 
 // tjl-begin - add this Method
-                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                    Method (XDSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         Store (Package (0x06)
                             {
