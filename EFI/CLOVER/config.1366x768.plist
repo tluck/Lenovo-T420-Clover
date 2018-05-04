@@ -268,7 +268,7 @@
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
-				<string>IOGraphicsFamily</string>
+				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>
 				AQAA6yU=
@@ -301,7 +301,7 @@
 				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
 				</data>
 				<key>Name</key>
-				<string>AppleIntelSNBGraphicsFB</string>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
 				<key>Replace</key>
 				<data>
 				AQIEABITAAASEwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
@@ -316,7 +316,7 @@
 				QVBQTEUgU1NE
 				</data>
 				<key>Name</key>
-				<string>IOAHCIBlockStorage</string>
+				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
 				<data>
 				AAAAAAAAAAAA
@@ -334,7 +334,7 @@
 				<key>MatchOS</key>
 				<string>10.13.x</string>
 				<key>Name</key>
-				<string>AppleAHCIPort</string>
+				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Replace</key>
 				<data>
 				iciD4P5mhckPmMFBCMyQkJCQdQs=
@@ -352,7 +352,7 @@
 				<key>MatchOS</key>
 				<string>10.13.x</string>
 				<key>Name</key>
-				<string>AppleAHCIPort</string>
+				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Replace</key>
 				<data>
 				kJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJA=
@@ -368,7 +368,7 @@
 				ixnUEQ==
 				</data>
 				<key>Name</key>
-				<string>AppleHDA</string>
+				<string>com.apple.driver.AppleHDA</string>
 				<key>Replace</key>
 				<data>
 				blDxFA==
