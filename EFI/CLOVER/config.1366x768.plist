@@ -58,7 +58,7 @@
 				<key>FIX_INTELGFX_100000</key>
 				<true/>
 				<key>FIX_RTC_20000</key>
-				<true/>
+				<false/>
 				<key>FIX_S3D_2000000</key>
 				<true/>
 				<key>FIX_TMR_40000</key>
@@ -146,7 +146,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>slide=0 kext-dev-mode=1</string>
+		<string>slide=0 -no_compat_check -lilubetaall -alcbeta</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -158,6 +158,8 @@
 		<key>IgnoreNVRAMBoot</key>
 		<false/>
 		<key>NoEarlyProgress</key>
+		<true/>
+		<key>RtcHibernateAware</key>
 		<true/>
 		<key>Timeout</key>
 		<integer>5</integer>
@@ -246,6 +248,8 @@
 		<dict>
 			<key>Intel</key>
 			<true/>
+			<key>ResetHDA</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
@@ -253,7 +257,7 @@
 		<key>AppleIntelCPUPM</key>
 		<true/>
 		<key>AppleRTC</key>
-		<true/>
+		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>KextsToPatch</key>
@@ -282,7 +286,7 @@
 				AQAAdSI=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x</string>
+				<string>10.13.x,10.14.x</string>
 				<key>Name</key>
 				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Replace</key>
@@ -332,7 +336,7 @@
 				RYX2D5XCiciD4P5mhcl4D4TSdQs=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x</string>
+				<string>10.13.x,10.14.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Replace</key>
@@ -350,7 +354,7 @@
 				icglQGACAD1AIAAAdQyB4b9///+Ji1EBAAA=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x</string>
+				<string>10.13.x,10.14.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Replace</key>
@@ -378,6 +382,10 @@
 	</dict>
 	<key>RtVariables</key>
 	<dict>
+		<key>#MLB</key>
+		<string>C1234567890123456</string>
+		<key>#ROM</key>
+		<string>c12345678901</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
@@ -385,6 +393,8 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>#SerialNumber</key>
+		<string>C12345678901</string>
 		<key>BoardVersion</key>
 		<string>MacBookPro8,1</string>
 		<key>Mobile</key>
