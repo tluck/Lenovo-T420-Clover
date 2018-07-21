@@ -5,30 +5,13 @@
 if [[ "$1" == "" ]];
 then
     bvs=$( system_profiler SPSoftwareDataType | grep Volume )
-    bv=${bvs#*: }
-    disk=$bv
+    disk="${bvs#*: }"
 else
     disk="$1"
 fi
 
-lds=$( diskutil info $disk |  grep "Part of"            | sed -e's/^.* disk/disk/' )
-pds=$( diskutil list $lds  | egrep " Volume on| Store " | sed -e's/^.* disk/disk/' )
-if [[ $pds == '' ]];
-then
-    pd=${lds}
-else
-    pd=${pds%s*}
-fi
-esp=${pd#*disk}
-
-if [[ $esp == "" ]];
-then
-    printf "*** Error - Could not find $disk\n"
-    printf "*** Default Disk Volume name is "macOS"\n  - Provide your Volume name: $0 Volume \n"
-    exit 1
-fi
 printf "Disk Volume name is: $disk\n"
-mntpt=$( espmount.bash $esp )
+mntpt=$( espmount.bash "$disk" )
 mounted0=$?
 if [[ $mounted0 != 0 ]];
 then
@@ -37,6 +20,11 @@ then
 fi
 
 printf "ESP is mounted here: $mntpt\n"
+if [[ ! -e $mntpt/EFI ]];
+then
+    printf "%s\n" "*** Error - Missing EFI on $mntpt"
+    exit 1
+fi
 cd $mntpt
 sudo xattr -cr EFI
 
@@ -81,8 +69,13 @@ else
     rm -rf EFI/CLOVER/kexts/10.?
     rm -rf EFI/CLOVER/kexts/10.??
 fi
-# Use Other
-test -e EFI/CLOVER/drivers64UEFI/OsxAptioFixDrv-64.efi && mv EFI/CLOVER/drivers64UEFI/OsxAptioFixDrv-64.efi EFI/CLOVER/drivers64UEFI/OsxAptioFixDrv-64.efi.NotUsed
+# Use new fix
+if [[ EFI/CLOVER/drivers64UEFI/AptioMemoryFix-64.efi ]];
+then
+test -e EFI/CLOVER/drivers64UEFI/OsxAptioFixDrv-64.efi  && mv EFI/CLOVER/drivers64UEFI/OsxAptioFixDrv-64.efi  EFI/CLOVER/drivers64UEFI/OsxAptioFixDrv-64.efi.NotUsed
+test -e EFI/CLOVER/drivers64UEFI/OsxAptioFix2Drv-64.efi && mv EFI/CLOVER/drivers64UEFI/OsxAptioFix2Drv-64.efi EFI/CLOVER/drivers64UEFI/OsxAptioFix2Drv-64.efi.NotUsed
+test -e EFI/CLOVER/drivers64UEFI/OsxAptioFix3Drv-64.efi && mv EFI/CLOVER/drivers64UEFI/OsxAptioFix3Drv-64.efi EFI/CLOVER/drivers64UEFI/OsxAptioFix3Drv-64.efi.NotUsed
+fi
 
 f=EFI/CLOVER/themes/ThinkPad 
 test -e $f && mv $f EFI/CLOVER/
@@ -147,5 +140,5 @@ fi
 
 fi # end nvram patch
 
-test $mounted0 -eq 0 && espmount.bash -u $esp
+test $mounted0 -eq 0 && espmount.bash -u "$disk"
 exit 0

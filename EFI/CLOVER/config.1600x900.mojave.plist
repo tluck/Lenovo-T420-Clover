@@ -546,11 +546,11 @@
 		<key>#SerialNumber</key>
 		<string>C12345678901</string>
 		<key>BoardVersion</key>
-		<string>MacBookPro9,1</string>
+		<string>MacBookPro11,1</string>
 		<key>Mobile</key>
 		<true/>
 		<key>ProductName</key>
-		<string>MacBookPro9,1</string>
+		<string>MacBookPro11,1</string>
 		<key>Trust</key>
 		<true/>
 	</dict>

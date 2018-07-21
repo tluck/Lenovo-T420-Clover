@@ -4,7 +4,7 @@
 #
 # Version 0.9 - Copyright (c) 2012 by RevoGirl
 #
-# Version 21.2 - Copyright (c) 2014 by Pike <PikeRAlpha@yahoo.com>
+# Version 21.4 - Copyright (c) 2014-2016 by Pike <PikeRAlpha@yahoo.com>
 #
 # Readme......: https://github.com/Piker-Alpha/ssdtPRGen.sh/blob/master/README.md
 #
@@ -25,7 +25,7 @@
 #
 # Script version info.
 #
-gScriptVersion=21.2
+gScriptVersion=21.4
 
 #
 # GitHub branch to pull data from (master or Beta).
@@ -38,7 +38,7 @@ gGitHubBranch="Beta"
 gGitHubContentURL="https://raw.githubusercontent.com/Piker-Alpha/ssdtPRGen.sh/${gGitHubBranch}"
 
 #
-# Change this to 1 if you want to use the Github project directory instead of ~/Desktop/ssdtPRGen
+# Change this to 1 if you want to use the Github project directory instead of ~/Library/ssdtPRGen
 #
 let gDeveloperMode=0
 
@@ -226,7 +226,7 @@ gRevision='0x000'${gScriptVersion:0:2}${gScriptVersion:3:1}'00'
 # Path and filename setup.
 #
 gHome=$(echo $HOME)
-gPath="${gHome}/Desktop/ssdtPRGen"
+gPath="${gHome}/Library/ssdtPRGen"
 gDataPath="${gPath}/Data"
 gToolPath="${gPath}/Tools"
 gSsdtID="ssdt"
@@ -2178,7 +2178,7 @@ function _convertACPIFiles()
           local path="${gExtractionPath}"
         else
           #
-          # No. Use default path (~/Desktop/ssdtPRGen/ACPI)
+          # No. Use default path (~/Library/ssdtPRGen/ACPI)
           #
           local path="${gACPITablePath}"
       fi
@@ -2450,7 +2450,7 @@ function _initProcessorScope()
           printf "ACPI Processor {...} Declaration(s) with ParentPrefixChar ('^') found in ${basename}\n"
           gScope=$(echo ${data:6:2} | xxd -r -p)
 
-          # ioreg -w0 -p IOACPIPlane -c IOACPIPlatformDevice -n _SB -r > ~/Desktop/ssdtPRGen/dsdt2.txt
+          # ioreg -w0 -p IOACPIPlane -c IOACPIPlatformDevice -n _SB -r > ~/Library/ssdtPRGen/dsdt2.txt
 
           if [[ $gScope =~ "^" ]];
             then
@@ -2686,7 +2686,7 @@ function _checkSourceFilename
   #
   # Check for RevoBoot (legacy) setup on root volume.
   #
-  if [[ -d /Extra/ACPI && -d /Extra/EFI ]];
+  if [[ -d "/Extra/ACPI" && -d "/Extra/EFI" ]];
     then
       let gIsLegacyRevoBoot=1
 
@@ -3597,9 +3597,6 @@ function _initBroadwellSetup()
                           ;;
 
     Mac-BE0E8AC46FE800CC) gTargetMacModel="MacBook8,1"
-                          ;;
-
-    Mac-F305150B0C7DEEEF) gTargetMacModel="MacBook8,2"
                           ;;
 
     Mac-A369DDC4E67F1C45) gSystemType=1
@@ -5069,7 +5066,7 @@ function main()
       #
       if [[ $iaslStatus -eq 0 && $gAutoCopy -eq 1 ]];
         then
-          if [ -f "${gPath}/${gSsdtID}.aml" ];
+          if [[ -f "${gPath}/${gSsdtID}.aml" && -d "${gDestinationPath}" ]];
             then
               echo ""
               read -p "Do you want to copy ${gPath}/${gSsdtID}.aml to ${gDestinationPath}${gDestinationFile}? (y/n)? " choice
