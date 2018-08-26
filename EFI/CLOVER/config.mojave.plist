@@ -146,7 +146,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>slide=0 -no_compat_check -lilubetaall -alcbeta</string>
+		<string>slide=64 -no_compat_check -lilubetaall -alcbeta</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -200,6 +200,31 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>#2e2-AAPL00,override-no-connect</key>
+				<data>
+				AP///////wAw5OICAAAAAAEUAQOAHxF44jOFmVZVkScX
+				UFQAAAABAQEBAQEBAQEBAQEBAQEBgCVAgGCEGjAwIDUA
+				Nq4QAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gBMZW5v
+				dm8KICAgICAgAAAA/gAxNjAweDkwMAogICAgAK0=
+				</data>
+				<key>#2e3-AAPL00,override-no-connect</key>
+				<data>
+				AP///////wAw5OMCAAAAAP8UAQSAHxF44jOFmVZVkScX
+				UFQAAAABAQEBAQEBAQEBAQEBAQEBriRAWmCEGjAwIDUA
+				Nq4QAAAaQB9AgGCEGjAwIDUANq4QAAAYAAAA/gBMZW5v
+				dm8KICAgICAgAAAA/gAxNjAweDkwMAogICAgAMY=
+				</data>
+				<key>#366-AAPL00,override-no-connect</key>
+				<data>
+				AP///////wAw5GYDAAAAAAAVAQSQHxF4AvxFlVhVkigg
+				UFQAAAABAQEBAQEBAQEBAQEBAQEBWC9A+GGEPDCgYDUA
+				Na4QAAAakB9A+GGEPDCgYDUANa4QAAAaAAAA/gAzTlBS
+				NoAxNDBXRDIKAAAAAAAAQTGeARAAAAIBCiAgAKc=
+				</data>
+				<key>#AAPL00,DualLink</key>
+				<data>
+				AQAAAA==
+				</data>
 				<key>@0,backlight-control</key>
 				<data>
 				AQAAAA==
@@ -235,24 +260,6 @@
 				<key>AAPL00,Dither</key>
 				<data>
 				AAAAAA==
-				</data>
-				<key>#AAPL00,override-no-connect</key>
-				<data>
-				AP///////wAw5OICAAAAAAEUAQOAHxF44jOFmVZVkScXUFQAAAAB
-				AQEBAQEBAQEBAQEBAQEBgCVAgGCEGjAwIDUANq4QAAAYAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAA/gBMZW5vdm8KICAgICAgAAAA/gAxNjAw
-				eDkwMAogICAgAK0=
-				</data>
-				<key>#AAPL00,override-no-connect</key>
-				<data>
-				AP///////wAw5GYDAAAAAAAVAQSQHxF4AvxFlVhVkiggUFQAAAAB
-				AQEBAQEBAQEBAQEBAQEBWC9A+GGEPDCgYDUANa4QAAAakB9A+GGE
-				PDCgYDUANa4QAAAaAAAA/gAzTlBSNoAxNDBXRDIKAAAAAAAAQTGe
-				ARAAAAIBCiAgAKc=
-				</data>
-				<key>#AAPL00,DualLink</key>
-				<data>
-				AQAAAA==
 				</data>
 				<key>AAPL00,LinkFormat</key>
 				<data>
@@ -540,6 +547,32 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>#Memory</key>
+		<dict>
+			<key>Channels</key>
+			<integer>1</integer>
+			<key>Modules</key>
+			<array>
+				<dict>
+					<key>Frequency</key>
+					<integer>1333</integer>
+					<key>Size</key>
+					<integer>4096</integer>
+					<key>Slot</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>Frequency</key>
+					<integer>1333</integer>
+					<key>Size</key>
+					<integer>4096</integer>
+					<key>Slot</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>SlotCount</key>
+			<integer>2</integer>
+		</dict>
 		<key>#SerialNumber</key>
 		<string>C12345678901</string>
 		<key>BoardVersion</key>
