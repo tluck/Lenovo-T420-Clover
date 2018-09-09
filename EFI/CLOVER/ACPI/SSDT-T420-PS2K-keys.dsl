@@ -23,35 +23,35 @@ DefinitionBlock ("", "SSDT", 2, "T420", "PS2K", 0)
             "Custom ADB Map", Package()
             {
                 Package(){},
-                "e01e=4da", //previous
-                "e045=42",  //next
+                "e01e=4d", //previous (audio)
+                "e045=42", //next (audio)
             },
             "Custom PS2 Map", Package()
             {
                 Package(){},
-                "e01e=e037", //Map tp disable to f8</string>
-                "e037=e01e", //Prevent PrntScr from triggering tp disable</string>
+                "e01e=e037", //Map tp disable to f8
+                "e037=e01e", //Prevent PrntScr from triggering tp disable
             },
             "Function Keys Special", Package()
             {
-                Package(){}, // The following 12 items map fkeys to Fn+fkeys</string>
-                "3b=e012", // F1  - Brightness Down</string>
-                "3c=e017", // F2  - Brightness Up</string>
-                "3d=e00a", // F3  - Mission Control (app select)</string>
-                "3e=e009", // F4  - Launchpad</string>
-                "3f=0",    // F5  - nothing</string>
-                "40=0",    // F6  - nothing</string>
-                "41=e06e", // F7  - Video Mirror</string>
-                "42=e037", // F8  - TP on/off</string>
-                "43=0",    // F9  - nothing</string>
-                "44=e020", // F10 - Volume Mute</string>
-                "57=e02e", // F11 - Volume Up</string>
-                "58=e030", // F12 - Volume Up</string>
-                "46=e022", // ScrLck - iTunes - play/pause</string>
+                Package(){}, // The following 12 items map fkeys to Fn+fkeys
+                "3b=e012", // F1  - Brightness Down
+                "3c=e017", // F2  - Brightness Up
+                "3d=3d",   // F3  -
+                "3e=3e",   // F4  - Set Keyboard Shortcuts for Launchpad to F4
+                "3f=3f",   // F5  - Set Mission Control Show Desktop from F11 to F5
+                "40=40",   // F6  - Set Mission Control Show Dashboard from F12 to F6
+                "41=e06e", // F7  - Video Mirror
+                "42=e037", // F8  - TP on/off
+                "43=43",   // F9  - 
+                "44=e020", // F10 - Volume Mute
+                "57=e02e", // F11 - Volume Up
+                "58=e030", // F12 - Volume Up
+                "46=e022", // ScrLck - iTunes - play/pause
             },
             "Function Keys Standard", Package()
             {
-                Package(){}, //The following 12 items map Fn+fkeys to Fn+fkeys</string>
+                Package(){}, //The following 12 items map Fn+fkeys to Fn+fkeys
                 "e05f=e05f",
                 "e012=e012",
                 "e017=e017",
@@ -64,7 +64,7 @@ DefinitionBlock ("", "SSDT", 2, "T420", "PS2K", 0)
                 "e010=e010",
                 "e022=e022",
                 "e019=e019",
-                //The following 12 items map fkeys to fkeys</string>
+                //The following 12 items map fkeys to fkeys
                 "3b=3b",
                 "3c=3c",
                 "3d=3d",

@@ -18,13 +18,13 @@
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20150515 (538248469)
  */
-DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
+DefinitionBlock ("DSDT.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
 {
 
-    External (_SB_.PCI0.SAT1.PRIM.GTME, UnknownObj)
-    External (_SB_.PCI0.SAT1.PRT1, UnknownObj)
-    External (_SB_.PCI0.SAT1.SCND.GTME, UnknownObj)
-    External (_SB_.PCI0.SAT1.SCND.MSTR, UnknownObj)
+    External (\_SB_.PCI0.SAT1.PRIM.GTME, UnknownObj)
+    External (\_SB_.PCI0.SAT1.PRT1, UnknownObj)
+    External (\_SB_.PCI0.SAT1.SCND.GTME, UnknownObj)
+    External (\_SB_.PCI0.SAT1.SCND.MSTR, UnknownObj)
     External (PDC0, UnknownObj)
     External (PDC1, UnknownObj)
     External (PDC2, UnknownObj)
@@ -59,7 +59,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
         Return (Ones != Match(Local0, MEQ, Arg0, MTR, 0, 0))
     }
 
-    Scope (_PR)
+    Scope (\_PR)
     {
         Processor (CPU0, 0x01, 0x00000410, 0x06) {}
         Processor (CPU1, 0x02, 0x00000410, 0x06) {}
@@ -543,7 +543,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
         AC1F,   8
     }
 
-    Scope (_SB)
+    Scope (\_SB)
     {
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
@@ -2320,21 +2320,21 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
 //                          Buffer (0x80)
 //                          {     
 //                              0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,
-//                              0x30, 0xE4, 0x66, 0x03, 0x00, 0x00, 0x00, 0x00,
-//                              0x00, 0x15, 0x01, 0x04, 0x90, 0x1F, 0x11, 0x78,
-//                              0x02, 0xFC, 0x45, 0x95, 0x58, 0x55, 0x92, 0x28,
-//                              0x20, 0x50, 0x54, 0x00, 0x00, 0x00, 0x01, 0x01,
+//                              0x30, 0xE4, 0xE2, 0x02, 0x00, 0x00, 0x00, 0x00,
+//                              0x01, 0x14, 0x01, 0x03, 0x80, 0x1F, 0x11, 0x78,
+//                              0xE2, 0x33, 0x85, 0x99, 0x56, 0x55, 0x91, 0x27,
+//                              0x17, 0x50, 0x54, 0x00, 0x00, 0x00, 0x01, 0x01,
 //                              0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,
-//                              0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x58, 0x2F,
-//                              0x40, 0xF8, 0x61, 0x84, 0x3C, 0x30, 0xA0, 0x60,
-//                              0x35, 0x00, 0x35, 0xAE, 0x10, 0x00, 0x00, 0x1A,
-//                              0x90, 0x1F, 0x40, 0xF8, 0x61, 0x84, 0x3C, 0x30,
-//                              0xA0, 0x60, 0x35, 0x00, 0x35, 0xAE, 0x10, 0x00,
-//                              0x00, 0x1A, 0x00, 0x00, 0x00, 0xFE, 0x00, 0x33,
-//                              0x4E, 0x50, 0x52, 0x36, 0x80, 0x31, 0x34, 0x30,
-//                              0x57, 0x44, 0x32, 0x0A, 0x00, 0x00, 0x00, 0x00,
-//                              0x00, 0x00, 0x41, 0x31, 0x9E, 0x01, 0x10, 0x00,
-//                              0x00, 0x02, 0x01, 0x0A, 0x20, 0x20, 0x00, 0xA7
+//                              0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x80, 0x25,
+//                              0x40, 0x80, 0x60, 0x84, 0x1A, 0x30, 0x30, 0x20,
+//                              0x35, 0x00, 0x36, 0xAE, 0x10, 0x00, 0x00, 0x18,
+//                              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+//                              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+//                              0x00, 0x00, 0x00, 0x00, 0x00, 0xFE, 0x00, 0x4C,
+//                              0x65, 0x6E, 0x6F, 0x76, 0x6F, 0x0A, 0x20, 0x20,
+//                              0x20, 0x20, 0x20, 0x20, 0x00, 0x00, 0x00, 0xFE,
+//                              0x00, 0x31, 0x36, 0x30, 0x30, 0x78, 0x39, 0x30,
+//                              0x30, 0x0A, 0x20, 0x20, 0x20, 0x20, 0x00, 0xAD
 //                          },
 // tjl-end
                             "hda-gfx", 
@@ -10765,17 +10765,17 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
         }
     }
 
-    Scope (_SB.PCI0.EH02.URTH.URMH.PRTC)
+    Scope (\_SB.PCI0.EH02.URTH.URMH.PRTC)
     {
         Name (_EJD, "\\_SB.GDCK")  // _EJD: Ejection Dependent Device
     }
 
-    Scope (_SB.PCI0.EH01.URTH.URMH.PRT5)
+    Scope (\_SB.PCI0.EH01.URTH.URMH.PRT5)
     {
         Name (_EJD, "\\_SB.PCI0.EXP4.XHC1")  // _EJD: Ejection Dependent Device
     }
 
-    Scope (_SB.PCI0.EXP4.XHC1)
+    Scope (\_SB.PCI0.EXP4.XHC1)
     {
         Name (_EJD, "\\_SB.PCI0.EH01.URTH.URMH.PRT5")  // _EJD: Ejection Dependent Device
     }
@@ -11106,7 +11106,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
 
             If (Local0)
             {
-                Notify (_SB, Zero) // Bus Check
+                Notify (\_SB, Zero) // Bus Check
             }
         }
 
@@ -11307,7 +11307,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
         }
     }
 
-    Scope (_SB.PCI0.LPC.EC.HKEY)
+    Scope (\_SB.PCI0.LPC.EC.HKEY)
     {
         Method (MHQT, 1, NotSerialized)
         {
@@ -11685,7 +11685,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
         }
     }
 
-    Scope (_SB.PCI0.LPC.EC)
+    Scope (\_SB.PCI0.LPC.EC)
     {
         Method (ATMC, 0, NotSerialized)
         {
@@ -11875,7 +11875,7 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
         }
     }
 
-    Scope (_SB.PCI0.LPC.EC)
+    Scope (\_SB.PCI0.LPC.EC)
     {
         Method (_Q40, 0, NotSerialized)  // _Qxx: EC Query
         {
@@ -12588,8 +12588,5 @@ DefinitionBlock ("dsdt.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
         Return (Local0)
     }
 
-    Scope (_SB)
-    {
-    }
 }
 

@@ -18,13 +18,13 @@
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20150515 (538248469)
  */
-DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
+DefinitionBlock ("DSDT.edid-2e3.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
 {
 
-    External (_SB_.PCI0.SAT1.PRIM.GTME, UnknownObj)
-    External (_SB_.PCI0.SAT1.PRT1, UnknownObj)
-    External (_SB_.PCI0.SAT1.SCND.GTME, UnknownObj)
-    External (_SB_.PCI0.SAT1.SCND.MSTR, UnknownObj)
+    External (\_SB_.PCI0.SAT1.PRIM.GTME, UnknownObj)
+    External (\_SB_.PCI0.SAT1.PRT1, UnknownObj)
+    External (\_SB_.PCI0.SAT1.SCND.GTME, UnknownObj)
+    External (\_SB_.PCI0.SAT1.SCND.MSTR, UnknownObj)
     External (PDC0, UnknownObj)
     External (PDC1, UnknownObj)
     External (PDC2, UnknownObj)
@@ -59,7 +59,7 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
         Return (Ones != Match(Local0, MEQ, Arg0, MTR, 0, 0))
     }
 
-    Scope (_PR)
+    Scope (\_PR)
     {
         Processor (CPU0, 0x01, 0x00000410, 0x06) {}
         Processor (CPU1, 0x02, 0x00000410, 0x06) {}
@@ -543,7 +543,7 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
         AC1F,   8
     }
 
-    Scope (_SB)
+    Scope (\_SB)
     {
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
@@ -2320,21 +2320,21 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
                           Buffer (0x80)
                           {     
                               0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,
-                              0x30, 0xE4, 0xE2, 0x02, 0x00, 0x00, 0x00, 0x00,
-                              0x01, 0x14, 0x01, 0x03, 0x80, 0x1F, 0x11, 0x78,
+                              0x30, 0xE4, 0xE3, 0x02, 0x00, 0x00, 0x00, 0x00,
+                              0xFF, 0x14, 0x01, 0x04, 0x80, 0x1F, 0x11, 0x78,
                               0xE2, 0x33, 0x85, 0x99, 0x56, 0x55, 0x91, 0x27,
                               0x17, 0x50, 0x54, 0x00, 0x00, 0x00, 0x01, 0x01,
                               0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,
-                              0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x80, 0x25,
-                              0x40, 0x80, 0x60, 0x84, 0x1A, 0x30, 0x30, 0x20,
-                              0x35, 0x00, 0x36, 0xAE, 0x10, 0x00, 0x00, 0x18,
-                              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                              0x00, 0x00, 0x00, 0x00, 0x00, 0xFE, 0x00, 0x4C,
+                              0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0xAE, 0x24,
+                              0x40, 0x5A, 0x60, 0x84, 0x1A, 0x30, 0x30, 0x20,
+                              0x35, 0x00, 0x36, 0xAE, 0x10, 0x00, 0x00, 0x1A,
+                              0x40, 0x1F, 0x40, 0x80, 0x60, 0x84, 0x1A, 0x30,
+                              0x30, 0x20, 0x35, 0x00, 0x36, 0xAE, 0x10, 0x00,
+                              0x00, 0x18, 0x00, 0x00, 0x00, 0xFE, 0x00, 0x4C,
                               0x65, 0x6E, 0x6F, 0x76, 0x6F, 0x0A, 0x20, 0x20,
                               0x20, 0x20, 0x20, 0x20, 0x00, 0x00, 0x00, 0xFE,
                               0x00, 0x31, 0x36, 0x30, 0x30, 0x78, 0x39, 0x30,
-                              0x30, 0x0A, 0x20, 0x20, 0x20, 0x20, 0x00, 0xAD
+                              0x30, 0x0A, 0x20, 0x20, 0x20, 0x20, 0x00, 0xC6
                           },
 // tjl-end
                             "hda-gfx", 
@@ -4511,32 +4511,32 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
 // tjl-fix -- need to install RehabMan's ACPIPoller.kext  
 // tjl-fix -- or install HWMonitor.app with ACPISensors.kext set to continuously poll in background
 /* FAN control START */
-                        If (LGreaterEqual (Local0, 0x55)) // CPU Temp is >= 85C
-                        { Store (0x07, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 7 - Maximum Speed 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x50)) // CPU Temp is >= 80C
-                        { Store (0x06, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 6 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x4B)) // CPU Temp is >= 75C
-                        { Store (0x05, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 5 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x46)) // CPU Temp is >= 70C
-                        { Store (0x04, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 4 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x41)) // CPU Temp is >= 65C
-                        { Store (0x03, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 3 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x3C)) // CPU Temp is >= 60C
-                        { Store (0x02, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 2 
-                        Else {
-                        If (LGreaterEqual (Local0, 0x01)) // CPU Temp is >= 01C
-                        { Store (0x01, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 1 - Lowest Speed 
-                        }
-                        }
-                        }
-                        }
-                        }
-                        }
+//                        If (LGreaterEqual (Local0, 0x55)) // CPU Temp is >= 85C
+//                        { Store (0x07, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 7 - Maximum Speed 
+//                        Else {
+//                        If (LGreaterEqual (Local0, 0x50)) // CPU Temp is >= 80C
+//                        { Store (0x06, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 6 
+//                        Else {
+//                        If (LGreaterEqual (Local0, 0x4B)) // CPU Temp is >= 75C
+//                        { Store (0x05, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 5 
+//                        Else {
+//                        If (LGreaterEqual (Local0, 0x46)) // CPU Temp is >= 70C
+//                        { Store (0x04, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 4 
+//                        Else {
+//                        If (LGreaterEqual (Local0, 0x41)) // CPU Temp is >= 65C
+//                        { Store (0x03, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 3 
+//                        Else {
+//                        If (LGreaterEqual (Local0, 0x3C)) // CPU Temp is >= 60C
+//                        { Store (0x02, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 2 
+//                        Else {
+//                        If (LGreaterEqual (Local0, 0x01)) // CPU Temp is >= 01C
+//                        { Store (0x01, \_SB.PCI0.LPC.EC.HFSP) } // Set FAN Mode 1 - Lowest Speed 
+//                        }
+//                        }
+//                        }
+//                        }
+//                        }
+//                        }
 /* FAN control END */
                         Return (Local0)
                     }
@@ -10765,17 +10765,17 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
         }
     }
 
-    Scope (_SB.PCI0.EH02.URTH.URMH.PRTC)
+    Scope (\_SB.PCI0.EH02.URTH.URMH.PRTC)
     {
         Name (_EJD, "\\_SB.GDCK")  // _EJD: Ejection Dependent Device
     }
 
-    Scope (_SB.PCI0.EH01.URTH.URMH.PRT5)
+    Scope (\_SB.PCI0.EH01.URTH.URMH.PRT5)
     {
         Name (_EJD, "\\_SB.PCI0.EXP4.XHC1")  // _EJD: Ejection Dependent Device
     }
 
-    Scope (_SB.PCI0.EXP4.XHC1)
+    Scope (\_SB.PCI0.EXP4.XHC1)
     {
         Name (_EJD, "\\_SB.PCI0.EH01.URTH.URMH.PRT5")  // _EJD: Ejection Dependent Device
     }
@@ -11106,7 +11106,7 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
 
             If (Local0)
             {
-                Notify (_SB, Zero) // Bus Check
+                Notify (\_SB, Zero) // Bus Check
             }
         }
 
@@ -11307,7 +11307,7 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
         }
     }
 
-    Scope (_SB.PCI0.LPC.EC.HKEY)
+    Scope (\_SB.PCI0.LPC.EC.HKEY)
     {
         Method (MHQT, 1, NotSerialized)
         {
@@ -11685,7 +11685,7 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
         }
     }
 
-    Scope (_SB.PCI0.LPC.EC)
+    Scope (\_SB.PCI0.LPC.EC)
     {
         Method (ATMC, 0, NotSerialized)
         {
@@ -11875,7 +11875,7 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
         }
     }
 
-    Scope (_SB.PCI0.LPC.EC)
+    Scope (\_SB.PCI0.LPC.EC)
     {
         Method (_Q40, 0, NotSerialized)  // _Qxx: EC Query
         {
@@ -12588,8 +12588,5 @@ DefinitionBlock ("dsdt.edid-hs.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000
         Return (Local0)
     }
 
-    Scope (_SB)
-    {
-    }
 }
 

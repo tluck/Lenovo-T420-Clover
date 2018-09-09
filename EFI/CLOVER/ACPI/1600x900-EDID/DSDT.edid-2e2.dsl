@@ -18,13 +18,13 @@
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20150515 (538248469)
  */
-DefinitionBlock ("dsdt.edid.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
+DefinitionBlock ("DSDT.edid-2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x00001460)
 {
 
-    External (_SB_.PCI0.SAT1.PRIM.GTME, UnknownObj)
-    External (_SB_.PCI0.SAT1.PRT1, UnknownObj)
-    External (_SB_.PCI0.SAT1.SCND.GTME, UnknownObj)
-    External (_SB_.PCI0.SAT1.SCND.MSTR, UnknownObj)
+    External (\_SB_.PCI0.SAT1.PRIM.GTME, UnknownObj)
+    External (\_SB_.PCI0.SAT1.PRT1, UnknownObj)
+    External (\_SB_.PCI0.SAT1.SCND.GTME, UnknownObj)
+    External (\_SB_.PCI0.SAT1.SCND.MSTR, UnknownObj)
     External (PDC0, UnknownObj)
     External (PDC1, UnknownObj)
     External (PDC2, UnknownObj)
@@ -59,7 +59,7 @@ DefinitionBlock ("dsdt.edid.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000146
         Return (Ones != Match(Local0, MEQ, Arg0, MTR, 0, 0))
     }
 
-    Scope (_PR)
+    Scope (\_PR)
     {
         Processor (CPU0, 0x01, 0x00000410, 0x06) {}
         Processor (CPU1, 0x02, 0x00000410, 0x06) {}
@@ -543,7 +543,7 @@ DefinitionBlock ("dsdt.edid.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000146
         AC1F,   8
     }
 
-    Scope (_SB)
+    Scope (\_SB)
     {
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
@@ -10765,17 +10765,17 @@ DefinitionBlock ("dsdt.edid.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000146
         }
     }
 
-    Scope (_SB.PCI0.EH02.URTH.URMH.PRTC)
+    Scope (\_SB.PCI0.EH02.URTH.URMH.PRTC)
     {
         Name (_EJD, "\\_SB.GDCK")  // _EJD: Ejection Dependent Device
     }
 
-    Scope (_SB.PCI0.EH01.URTH.URMH.PRT5)
+    Scope (\_SB.PCI0.EH01.URTH.URMH.PRT5)
     {
         Name (_EJD, "\\_SB.PCI0.EXP4.XHC1")  // _EJD: Ejection Dependent Device
     }
 
-    Scope (_SB.PCI0.EXP4.XHC1)
+    Scope (\_SB.PCI0.EXP4.XHC1)
     {
         Name (_EJD, "\\_SB.PCI0.EH01.URTH.URMH.PRT5")  // _EJD: Ejection Dependent Device
     }
@@ -11106,7 +11106,7 @@ DefinitionBlock ("dsdt.edid.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000146
 
             If (Local0)
             {
-                Notify (_SB, Zero) // Bus Check
+                Notify (\_SB, Zero) // Bus Check
             }
         }
 
@@ -11307,7 +11307,7 @@ DefinitionBlock ("dsdt.edid.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000146
         }
     }
 
-    Scope (_SB.PCI0.LPC.EC.HKEY)
+    Scope (\_SB.PCI0.LPC.EC.HKEY)
     {
         Method (MHQT, 1, NotSerialized)
         {
@@ -11685,7 +11685,7 @@ DefinitionBlock ("dsdt.edid.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000146
         }
     }
 
-    Scope (_SB.PCI0.LPC.EC)
+    Scope (\_SB.PCI0.LPC.EC)
     {
         Method (ATMC, 0, NotSerialized)
         {
@@ -11875,7 +11875,7 @@ DefinitionBlock ("dsdt.edid.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000146
         }
     }
 
-    Scope (_SB.PCI0.LPC.EC)
+    Scope (\_SB.PCI0.LPC.EC)
     {
         Method (_Q40, 0, NotSerialized)  // _Qxx: EC Query
         {
@@ -12588,8 +12588,5 @@ DefinitionBlock ("dsdt.edid.2e2.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x0000146
         Return (Local0)
     }
 
-    Scope (_SB)
-    {
-    }
 }
 
