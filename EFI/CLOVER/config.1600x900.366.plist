@@ -40,61 +40,61 @@
 			<key>Fixes</key>
 			<dict>
 				<key>AddDTGP_0001</key>
-				<true/>
+				<false/>
 				<key>AddHDMI_8000000</key>
-				<true/>
+				<false/>
 				<key>AddIMEI_80000</key>
 				<false/>
 				<key>AddMCHC_0008</key>
 				<false/>
 				<key>AddPNLF_1000000</key>
-				<true/>
+				<false/>
 				<key>DeleteUnused_400000</key>
-				<true/>
+				<false/>
 				<key>FIX_ACST_4000000</key>
-				<true/>
+				<false/>
 				<key>FIX_ADP1_800000</key>
 				<false/>
 				<key>FIX_INTELGFX_100000</key>
-				<true/>
+				<false/>
 				<key>FIX_RTC_20000</key>
-				<true/>
+				<false/>
 				<key>FIX_S3D_2000000</key>
-				<true/>
+				<false/>
 				<key>FIX_TMR_40000</key>
-				<true/>
+				<false/>
 				<key>FIX_WAK_200000</key>
 				<false/>
 				<key>FakeLPC_0020</key>
 				<false/>
 				<key>FixAirport_4000</key>
-				<true/>
+				<false/>
 				<key>FixDarwin_0002</key>
-				<true/>
+				<false/>
 				<key>FixDisplay_0100</key>
-				<true/>
+				<false/>
 				<key>FixFirewire_0800</key>
 				<false/>
 				<key>FixHDA_8000</key>
-				<true/>
+				<false/>
 				<key>FixHPET_0010</key>
 				<false/>
 				<key>FixIDE_0200</key>
 				<false/>
 				<key>FixIPIC_0040</key>
-				<true/>
+				<false/>
 				<key>FixLAN_2000</key>
-				<true/>
+				<false/>
 				<key>FixRegions_10000000</key>
 				<true/>
 				<key>FixSATA_0400</key>
 				<false/>
 				<key>FixSBUS_0080</key>
-				<true/>
+				<false/>
 				<key>FixShutdown_0004</key>
 				<false/>
 				<key>FixUSB_1000</key>
-				<true/>
+				<false/>
 				<key>NewWay_80000000</key>
 				<true/>
 			</dict>
