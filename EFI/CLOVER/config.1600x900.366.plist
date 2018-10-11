@@ -173,7 +173,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>12</string>
+			<string>14</string>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>

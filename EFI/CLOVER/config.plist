@@ -173,7 +173,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>12</string>
+			<string>14</string>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -250,6 +250,34 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
+		<key>#EDID</key>
+		<dict>
+			<key>Comment</key>
+			<string>LCD 1600x900</string>
+                        <key>Custom</key>
+				<data>
+				AP///////wAw5OICAAAAAAEUAQOAHxF44jOFmVZVkScX
+				UFQAAAABAQEBAQEBAQEBAQEBAQEBgCVAgGCEGjAwIDUA
+				Nq4QAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gBMZW5v
+				dm8KICAgICAgAAAA/gAxNjAweDkwMAogICAgAK0=
+				</data>
+		        <key>#2e3-Custom</key>
+				<data>
+				AP///////wAw5OMCAAAAAP8UAQSAHxF44jOFmVZVkScX
+				UFQAAAABAQEBAQEBAQEBAQEBAQEBriRAWmCEGjAwIDUA
+				Nq4QAAAaQB9AgGCEGjAwIDUANq4QAAAYAAAA/gBMZW5v
+				dm8KICAgICAgAAAA/gAxNjAweDkwMAogICAgAMY=
+				</data>
+		        <key>#366-Custom</key>
+				<data>
+				AP///////wAw5GYDAAAAAAAVAQSQHxF4AvxFlVhVkigg
+				UFQAAAABAQEBAQEBAQEBAQEBAQEBWC9A+GGEPDCgYDUA
+				Na4QAAAakB9A+GGEPDCgYDUANa4QAAAaAAAA/gAzTlBS
+				NoAxNDBXRDIKAAAAAAAAQTGeARAAAAIBCiAgAKc=
+				</data>
+			<key>Inject</key>
+			<true/>
+		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
@@ -397,6 +425,32 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>#Memory</key>
+		<dict>
+			<key>Channels</key>
+			<integer>1</integer>
+			<key>Modules</key>
+			<array>
+				<dict>
+					<key>Frequency</key>
+					<integer>1333</integer>
+					<key>Size</key>
+					<integer>4096</integer>
+					<key>Slot</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>Frequency</key>
+					<integer>1333</integer>
+					<key>Size</key>
+					<integer>4096</integer>
+					<key>Slot</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>SlotCount</key>
+			<integer>2</integer>
+		</dict>
 		<key>#SerialNumber</key>
 		<string>C12345678901</string>
 		<key>BoardVersion</key>

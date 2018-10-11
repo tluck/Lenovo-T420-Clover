@@ -2259,18 +2259,18 @@ DefinitionBlock ("DSDT.heat-step.aml", "DSDT", 1, "Apple ", "TP-83   ", 0x000014
                     Noop
                 }
 
-                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                Method (XDSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    Store (Package (0x0C)
+                    Store (Package ()
                         {
                             "hda-gfx", 
                             Buffer (0x0A)
                             {
                                 "onboard-1"
                             }, 
-// tjl-fix - ID set by Clover - 12 for Normal, 13 for adding Dock Ports
-                            /* "layout-id", 
-                            Unicode ("\x0C"), */
+// tjl-fix - ID set by Clover - 14 for Normal, 13 for adding Dock Ports
+                            /* "alc-layout-id", 
+                            Unicode ("\x0E"), */
                             "codec-id", 
                             Buffer (0x04)
                             {
