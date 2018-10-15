@@ -183,6 +183,10 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>#AAPL00,DualLink</key>
+				<data>
+				AQAAAA==
+				</data>
 				<key>@0,backlight-control</key>
 				<data>
 				AQAAAA==
