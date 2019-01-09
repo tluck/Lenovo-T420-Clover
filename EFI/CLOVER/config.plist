@@ -296,56 +296,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
-				<key>Find</key>
-				<data>
-				AQAAdSU=
-				</data>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				AQAA6yU=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.13 beta (based on denskop patch)</string>
-				<key>Find</key>
-				<data>
-				AQAAdSI=
-				</data>
-				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				AQAA6yI=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Patch Framebuffer Levels and Replace 4th port with VGA</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
-				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
-				</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
-				<key>Replace</key>
-				<data>
-				AQIEABITAAASEwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
-				AAAAAwQAAAAEAAAJAAAABgIAAAABAAAJAAAA
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>TRIM for SSD</string>
 				<key>Find</key>
 				<data>
@@ -396,21 +346,24 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>change AD198B for Conexant 20672</string>
+				<string>Patch Framebuffer to Replace 4th port with VGA</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
-				ixnUEQ==
+				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
+				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
 				</data>
 				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
 				<key>Replace</key>
 				<data>
-				blDxFA==
+				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
+				AAAAAwQAAAAEAAAJAAAABgIAAAABAAAJAAAA
 				</data>
 			</dict>
 		</array>
+	</dict>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
