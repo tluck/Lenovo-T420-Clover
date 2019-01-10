@@ -183,9 +183,13 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>#AAPL00,DualLink</key>
+				<key>#AAPL,os-info</key>
 				<data>
-				AQAAAA==
+				MEkBERERCAAAAfAfAQAAABAHAAA=
+				</data>
+				<key>#AAPL,tbl-info</key>
+				<data>
+				MEQCAgICAAAAAAEBAQEBAQEB
 				</data>
 				<key>@0,backlight-control</key>
 				<data>
@@ -203,17 +207,9 @@
 				<data>
 				AQAAAA==
 				</data>
-				<key>#AAPL,os-info</key>
-				<data>
-				MEkBERERCAAAAfAfAQAAABAHAAA=
-				</data>
 				<key>AAPL,snb-platform-id</key>
 				<data>
 				AAABAA==
-				</data>
-				<key>#AAPL,tbl-info</key>
-				<data>
-				MEQCAgICAAAAAAEBAQEBAQEB
 				</data>
 				<key>AAPL00,DataJustify</key>
 				<data>
@@ -222,6 +218,10 @@
 				<key>AAPL00,Dither</key>
 				<data>
 				AAAAAA==
+				</data>
+				<key>#AAPL00,DualLink</key>
+				<data>
+				AQAAAA==
 				</data>
 				<key>AAPL00,LinkFormat</key>
 				<data>
@@ -262,9 +262,6 @@
 				<key>AAPL00,T7</key>
 				<data>
 				9AEAAA==
-				</data>
-				<key>AAPL00,override-no-connect</key>
-				<data>
 				</data>
 				<key>class-code</key>
 				<data>
@@ -354,42 +351,22 @@
 			<key>Tool</key>
 			<true/>
 		</dict>
-		<key>ScreenResolution</key>
-		<string>960x600</string>
-		<key>ScreenResolution-alt1</key>
-		<string>1366x768</string>
-		<key>ScreenResolution-alt2</key>
-		<string>1600x900</string>
 		<key>Theme</key>
 		<string>ThinkPad</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>#EDID</key>
+		<key>EDID</key>
 		<dict>
 			<key>Comment</key>
 			<string>LCD 1600x900</string>
-                        <key>Custom</key>
-				<data>
-				AP///////wAw5OICAAAAAAEUAQOAHxF44jOFmVZVkScX
-				UFQAAAABAQEBAQEBAQEBAQEBAQEBgCVAgGCEGjAwIDUA
-				Nq4QAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gBMZW5v
-				dm8KICAgICAgAAAA/gAxNjAweDkwMAogICAgAK0=
-				</data>
-		        <key>#2e3-Custom</key>
-				<data>
-				AP///////wAw5OMCAAAAAP8UAQSAHxF44jOFmVZVkScX
-				UFQAAAABAQEBAQEBAQEBAQEBAQEBriRAWmCEGjAwIDUA
-				Nq4QAAAaQB9AgGCEGjAwIDUANq4QAAAYAAAA/gBMZW5v
-				dm8KICAgICAgAAAA/gAxNjAweDkwMAogICAgAMY=
-				</data>
-		        <key>#366-Custom</key>
-				<data>
-				AP///////wAw5GYDAAAAAAAVAQSQHxF4AvxFlVhVkigg
-				UFQAAAABAQEBAQEBAQEBAQEBAQEBWC9A+GGEPDCgYDUA
-				Na4QAAAakB9A+GGEPDCgYDUANa4QAAAaAAAA/gAzTlBS
-				NoAxNDBXRDIKAAAAAAAAQTGeARAAAAIBCiAgAKc=
-				</data>
+			<key>Custom</key>
+			<data>
+			AP///////wAw5OMCAAAAAP8UAQSAHxF44jOFmVZVkScXUFQAAAAB
+			AQEBAQEBAQEBAQEBAQEBriRAWmCEGjAwIDUANq4QAAAaQB9AgGCE
+			GjAwIDUANq4QAAAYAAAA/gBMZW5vdm8KICAgICAgAAAA/gAxNjAw
+			eDkwMAogICAgAMY=
+			</data>
 			<key>Inject</key>
 			<true/>
 		</dict>
@@ -409,6 +386,24 @@
 		<false/>
 		<key>KextsToPatch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Patch Framebuffer to Replace 4th port with VGA</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
+				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
+				</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
+				<key>Replace</key>
+				<data>
+				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
+				AAAAAwQAAAAEAAAJAAAABgIAAAABAAAJAAAA
+				</data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>TRIM for SSD</string>
@@ -459,24 +454,6 @@
 				kJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJA=
 				</data>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Patch Framebuffer to Replace 4th port with VGA</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
-				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
-				</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
-				<key>Replace</key>
-				<data>
-				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
-				AAAAAwQAAAAEAAAJAAAABgIAAAABAAAJAAAA
-				</data>
-			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -492,32 +469,6 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>#Memory</key>
-		<dict>
-			<key>Channels</key>
-			<integer>1</integer>
-			<key>Modules</key>
-			<array>
-				<dict>
-					<key>Frequency</key>
-					<integer>1333</integer>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Slot</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>Frequency</key>
-					<integer>1333</integer>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Slot</key>
-					<integer>1</integer>
-				</dict>
-			</array>
-			<key>SlotCount</key>
-			<integer>2</integer>
-		</dict>
 		<key>#SerialNumber</key>
 		<string>C12345678901</string>
 		<key>BoardVersion</key>

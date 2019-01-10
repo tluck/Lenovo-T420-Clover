@@ -239,12 +239,6 @@
 			<key>Tool</key>
 			<true/>
 		</dict>
-		<key>ScreenResolution</key>
-		<string>960x600</string>
-		<key>ScreenResolution-alt1</key>
-		<string>1366x768</string>
-		<key>ScreenResolution-alt2</key>
-		<string>1600x900</string>
 		<key>Theme</key>
 		<string>ThinkPad</string>
 	</dict>
@@ -266,6 +260,24 @@
 		<false/>
 		<key>KextsToPatch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Patch Framebuffer to Replace 4th port with VGA</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
+				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
+				</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
+				<key>Replace</key>
+				<data>
+				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
+				AAAAAwQAAAAEAAAJAAAABgIAAAABAAAJAAAA
+				</data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>TRIM for SSD</string>
@@ -314,24 +326,6 @@
 				<key>Replace</key>
 				<data>
 				kJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Patch Framebuffer to Replace 4th port with VGA</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
-				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
-				</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
-				<key>Replace</key>
-				<data>
-				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
-				AAAAAwQAAAAEAAAJAAAABgIAAAABAAAJAAAA
 				</data>
 			</dict>
 		</array>
