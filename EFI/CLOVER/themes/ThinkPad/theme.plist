@@ -38,7 +38,7 @@
 		<key>Font</key>
 		<dict>
 			<key>CharWidth</key>
-			<integer>9</integer>
+			<integer>8</integer>
 			<key>Path</key>
 			<string>font.png</string>
 			<key>Type</key>
@@ -55,6 +55,6 @@
 		</dict>
 	</dict>
 	<key>Year</key>
-	<string>2016</string>
+	<string>2019</string>
 </dict>
 </plist>
