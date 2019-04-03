@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleGetInfoString</key>
-	<string>0.9.3, Copyright 2017 RehabMan Inc. All rights reserved.</string>
+	<string>0.9.4, Copyright 2017 RehabMan Inc. All rights reserved.</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.rehabman.driver.AppleBacklightInjector</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.9.3</string>
+	<string>0.9.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -23,7 +23,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>0.9.3</string>
+	<string>0.9.4</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>AppleIntelPanelA</key>
@@ -45,21 +45,6 @@
 				ABEAAACMANgBNgGPAf4CowNFA+cExwU1B1oJHAsTDZsQ
 				WRMS
 				</data>
-				<key>F10T050b</key>
-				<data>
-				ABEAAAAcACwAPwBRAGgAigCrAMwA+gE1AYEB3QJEAskD
-				WQPo
-				</data>
-				<key>F10T11ed</key>
-				<data>
-				ABEAAABPAHoAsADjASIBfwHbAjgCtwNaBC4FLgZMB7wJ
-				SwrY
-				</data>
-				<key>F10T159e</key>
-				<data>
-				ABEAAAAcACwAPwBRAGgAigCrAMwA+gE1AYEB3QJEAskD
-				WQPo
-				</data>
 				<key>F10T213e</key>
 				<data>
 				ABEAAACMANgBNgGPAf4CowNFA+cExwU1B1oJHAsTDZsQ
@@ -74,6 +59,31 @@
 				<data>
 				ABEAAACMANgBNgGPAf4CowNFA+cExwU1B1oJHAsTDZsQ
 				WRMS
+				</data>
+				<key>F15T11ed</key>
+				<data>
+				ABEAAABPAHoAsADjASIBfwHbAjgCtwNaBC4FLgZMB7wJ
+				SwrZ
+				</data>
+				<key>F15Txxxx</key>
+				<data>
+				ABEAAABPAHoAsADjASIBfwHbAjgCtwNaBC4FLgZMB7wJ
+				SwrZ
+				</data>
+				<key>F16T050b</key>
+				<data>
+				ABEAAAAcACwAPwBRAGgAigCrAMwA+gE1AYEB3QJEAskD
+				WQPo
+				</data>
+				<key>F16T159e</key>
+				<data>
+				ABEAAAAcACwAPwBRAGgAigCrAMwA+gE1AYEB3QJEAskD
+				WQPo
+				</data>
+				<key>F16Txxxx</key>
+				<data>
+				ABEAAAAcACwAPwBRAGgAigCrAMwA+gE1AYEB3QJEAskD
+				WQPo
 				</data>
 			</dict>
 			<key>CFBundleIdentifier</key>
@@ -100,7 +110,7 @@
 			<key>IONameMatch</key>
 			<string>backlight</string>
 			<key>IOProbeScore</key>
-			<integer>2500</integer>
+			<integer>5500</integer>
 			<key>IOProviderClass</key>
 			<string>IOACPIPlatformDevice</string>
 		</dict>
