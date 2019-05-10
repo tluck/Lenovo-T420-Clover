@@ -146,7 +146,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>slide=64 -no_compat_check -lilubetaall -alcbeta</string>
+		<string>slide=0 -no_compat_check -lilubetaall -alcbeta</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -362,10 +362,10 @@
 			<string>LCD 1600x900</string>
 			<key>Custom</key>
 			<data>
-			AP///////wAw5OMCAAAAAP8UAQSAHxF44jOFmVZVkScXUFQAAAAB
-			AQEBAQEBAQEBAQEBAQEBriRAWmCEGjAwIDUANq4QAAAaQB9AgGCE
-			GjAwIDUANq4QAAAYAAAA/gBMZW5vdm8KICAgICAgAAAA/gAxNjAw
-			eDkwMAogICAgAMY=
+			AP///////wAw5OICAAAAAAEUAQOAHxF44jOFmVZVkScXUFQAAAAB
+			AQEBAQEBAQEBAQEBAQEBgCVAgGCEGjAwIDUANq4QAAAYAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAA/gBMZW5vdm8KICAgICAgAAAA/gAxNjAw
+			eDkwMAogICAgAK0=
 			</data>
 			<key>Inject</key>
 			<true/>
