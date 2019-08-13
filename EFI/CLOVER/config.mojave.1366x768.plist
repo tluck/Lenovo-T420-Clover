@@ -183,14 +183,6 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>#AAPL,os-info</key>
-				<data>
-				MEkBERERCAAAAfAfAQAAABAHAAA=
-				</data>
-				<key>#AAPL,tbl-info</key>
-				<data>
-				MEQCAgICAAAAAAEBAQEBAQEB
-				</data>
 				<key>@0,backlight-control</key>
 				<data>
 				AQAAAA==
@@ -207,9 +199,17 @@
 				<data>
 				AQAAAA==
 				</data>
+				<key>AAPL,os-info</key>
+				<data>
+				MEkBERERCAAAAfAfAQAAABAHAAA=
+				</data>
 				<key>AAPL,snb-platform-id</key>
 				<data>
 				AAABAA==
+				</data>
+				<key>AAPL,tbl-info</key>
+				<data>
+				MEQCAgICAAAAAAEBAQEBAQEB
 				</data>
 				<key>AAPL00,DataJustify</key>
 				<data>
@@ -219,9 +219,9 @@
 				<data>
 				AAAAAA==
 				</data>
-				<key>#AAPL00,DualLink</key>
+				<key>AAPL00,DualLink</key>
 				<data>
-				AQAAAA==
+				AAAAAA==
 				</data>
 				<key>AAPL00,LinkFormat</key>
 				<data>
@@ -362,18 +362,18 @@
 			<string>LCD 1600x900</string>
 			<key>Custom</key>
 			<data>
-			AP///////wAw5OMCAAAAAP8UAQSAHxF44jOFmVZVkScXUFQAAAAB
-			AQEBAQEBAQEBAQEBAQEBriRAWmCEGjAwIDUANq4QAAAaQB9AgGCE
-			GjAwIDUANq4QAAAYAAAA/gBMZW5vdm8KICAgICAgAAAA/gAxNjAw
-			eDkwMAogICAgAMY=
+			AP///////wAw5OICAAAAAAEUAQOAHxF44jOFmVZVkScXUFQAAAAB
+			AQEBAQEBAQEBAQEBAQEBgCVAgGCEGjAwIDUANq4QAAAYAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAA/gBMZW5vdm8KICAgICAgAAAA/gAxNjAw
+			eDkwMAogICAgAK0=
 			</data>
 			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>

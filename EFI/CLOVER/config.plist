@@ -244,7 +244,7 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>#EDID</key>
+		<key>EDID</key>
 		<dict>
 			<key>Comment</key>
 			<string>LCD 1600x900</string>
@@ -261,7 +261,7 @@
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>

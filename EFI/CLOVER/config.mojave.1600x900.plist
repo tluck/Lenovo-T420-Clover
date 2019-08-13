@@ -146,7 +146,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>slide=0 -no_compat_check -lilubetaall -alcbeta -wegdbg</string>
+		<string>slide=0 -no_compat_check -lilubetaall -alcbeta</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -183,14 +183,6 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>AAPL,os-info</key>
-				<data>
-				MEkBERERCAAAAfAfAQAAABAHAAA=
-				</data>
-				<key>AAPL,tbl-info</key>
-				<data>
-				MEQCAgICAAAAAAEBAQEBAQEB
-				</data>
 				<key>@0,backlight-control</key>
 				<data>
 				AQAAAA==
@@ -207,9 +199,17 @@
 				<data>
 				AQAAAA==
 				</data>
+				<key>AAPL,os-info</key>
+				<data>
+				MEkBERERCAAAAfAfAQAAABAHAAA=
+				</data>
 				<key>AAPL,snb-platform-id</key>
 				<data>
 				AAABAA==
+				</data>
+				<key>AAPL,tbl-info</key>
+				<data>
+				MEQCAgICAAAAAAEBAQEBAQEB
 				</data>
 				<key>AAPL00,DataJustify</key>
 				<data>
@@ -263,13 +263,6 @@
 				<data>
 				9AEAAA==
 				</data>
-				<key>AAPL00,override-no-connect</key>
-				<data>
-				AP///////wAw5OMCAAAAAP8UAQSAHxF44jOFmVZVkScX
-				UFQAAAABAQEBAQEBAQEBAQEBAQEBriRAWmCEGjAwIDUA
-				Nq4QAAAaQB9AgGCEGjAwIDUANq4QAAAYAAAA/gBMZW5v
-				dm8KICAgICAgAAAA/gAxNjAweDkwMAogICAgAMY=
-				</data>
 				<key>class-code</key>
 				<data>
 				AAADAA==
@@ -277,10 +270,6 @@
 				<key>device-id</key>
 				<data>
 				JgEAAA==
-				</data>
-				<key>framebuffer-patch-enable</key>
-				<data>
-				AQAAAA==
 				</data>
 				<key>graphic-options</key>
 				<data>
@@ -370,7 +359,7 @@
 		<key>EDID</key>
 		<dict>
 			<key>Comment</key>
-			<string>LCD 1600x900 2e2</string>
+			<string>LCD 1600x900</string>
 			<key>Custom</key>
 			<data>
 			AP///////wAw5OICAAAAAAEUAQOAHxF44jOFmVZVkScXUFQAAAAB
@@ -399,45 +388,9 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AQAAdSU=
-				</data>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				AQAA6yU=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.13 beta (based on denskop patch)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AQAAdSI=
-				</data>
-				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				AQAA6yI=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Patch Framebuffer to Replace 4th port with VGA</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
@@ -499,40 +452,6 @@
 				<key>Replace</key>
 				<data>
 				kJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change AD198B for Conexant 20672</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				ixnUEQ==
-				</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				blDxFA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>1024GB memory</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				x0XQAAAAIA==
-				</data>
-				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
-				<key>Replace</key>
-				<data>
-				x0XQAAAAQA==
 				</data>
 			</dict>
 		</array>
