@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>18D42</string>
+	<string>18G87</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.5.0d0</string>
+	<string>2.5.0d14</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,29 +25,56 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.5.0d0</string>
+	<string>2.5.0d14</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>10B61</string>
+	<string>10G8</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>16E185</string>
+	<string>18G74</string>
 	<key>DTSDKName</key>
-	<string>macosx10.12</string>
+	<string>macosx10.14</string>
 	<key>DTXcode</key>
-	<string>1010</string>
+	<string>1030</string>
 	<key>DTXcodeBuild</key>
-	<string>10B61</string>
+	<string>10G8</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>IntelMausi</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.insanelymac.IntelMausiEthernet</string>
+			<key>Driver Parameters</key>
+			<dict>
+				<key>enableCSO6</key>
+				<true/>
+				<key>enableTSO4</key>
+				<true/>
+				<key>enableTSO6</key>
+				<true/>
+				<key>maxIntrRate10</key>
+				<integer>3000</integer>
+				<key>maxIntrRate100</key>
+				<integer>5000</integer>
+				<key>maxIntrRate1000</key>
+				<integer>8000</integer>
+				<key>rxAbsTime10</key>
+				<integer>0</integer>
+				<key>rxAbsTime100</key>
+				<integer>0</integer>
+				<key>rxAbsTime1000</key>
+				<integer>10</integer>
+				<key>rxDelayTime10</key>
+				<integer>0</integer>
+				<key>rxDelayTime100</key>
+				<integer>0</integer>
+				<key>rxDelayTime1000</key>
+				<integer>0</integer>
+			</dict>
 			<key>Driver_Version</key>
-			<string>2.5.0d0</string>
+			<string>2.5.0d14</string>
 			<key>IOClass</key>
 			<string>IntelMausi</string>
 			<key>IOPCIMatch</key>
@@ -56,14 +83,6 @@
 			<integer>1000</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
-			<key>enableCSO6</key>
-			<true/>
-			<key>enableTSO4</key>
-			<true/>
-			<key>enableTSO6</key>
-			<true/>
-			<key>maxIntrRate</key>
-			<integer>7000</integer>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
