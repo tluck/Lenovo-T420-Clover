@@ -36,6 +36,8 @@ if [[ $OSXv == *"10.11"* ]]; then ver=10.11 ; fi
 if [[ $OSXv == *"10.12"* ]]; then ver=10.12 ; fi
 if [[ $OSXv == *"10.13"* ]]; then ver=10.13 ; fi
 if [[ $OSXv == *"10.14"* ]]; then ver=10.14 ; fi
+if [[ $OSXv == *"10.15"* ]]; then ver=10.15 ; fi
+if [[ $OSXv == *"10.16"* ]]; then ver=10.16 ; fi
 
 echo The target OS is: $ver "($OSXv)"
 
