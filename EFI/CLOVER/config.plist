@@ -196,6 +196,7 @@
 	<key>DisableDrivers</key>
 	<array>
 		<string>EmuVariableUefi-64</string>
+		<string>EmuVariableUefi</string>
 	</array>
 	<key>GUI</key>
 	<dict>
@@ -244,7 +245,9 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>EDID</key>
+		<key>#DualLink</key>
+		<integer>1</integer>
+		<key>#EDID</key>
 		<dict>
 			<key>Comment</key>
 			<string>LCD 1600x900</string>
@@ -261,7 +264,7 @@
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
@@ -316,7 +319,7 @@
 				RYX2D5XCiciD4P5mhcl4D4TSdQs=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Replace</key>
@@ -334,7 +337,7 @@
 				icglQGACAD1AIAAAdQyB4b9///+Ji1EBAAA=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Replace</key>

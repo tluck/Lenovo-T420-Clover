@@ -51,9 +51,9 @@
 				<key>enableCSO6</key>
 				<true/>
 				<key>enableTSO4</key>
-				<true/>
+				<false/>
 				<key>enableTSO6</key>
-				<true/>
+				<false/>
 				<key>maxIntrRate10</key>
 				<integer>3000</integer>
 				<key>maxIntrRate100</key>
