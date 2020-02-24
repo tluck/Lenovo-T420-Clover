@@ -36,8 +36,8 @@ fi
 # find esp of boot volume
 bvs=$( system_profiler SPSoftwareDataType | grep Volume )
 bv=${bvs#*: }
-lds=$( diskutil info $bv  |  grep "Part of"          | sed -e's/^.* disk/disk/' )
-pds1=$( diskutil list $lds | egrep " Volume on| Store " | sed -e's/^.* disk/disk/' )
+lds=$( diskutil info "$bv"  |  grep "Part of"          | sed -e's/^.* disk/disk/' )
+pds1=$( diskutil list "$lds" | egrep " Volume on| Store " | sed -e's/^.* disk/disk/' )
 #pds2=$( diskutil list      | egrep " Container $lds" | sed -e's/^.* disk/disk/' )
 pds=${pds1}${pds2}
 if [[ $pds == '' ]]; 
@@ -49,7 +49,7 @@ fi
 besp=${pd#*disk}
 
 # find esp of requested volume
-lds=$( diskutil info $vol |  grep "Part of"          | sed -e's/^.* disk/disk/' )
+lds=$( diskutil info "$vol" |  grep "Part of"          | sed -e's/^.* disk/disk/' )
 if [[ $lds == "" ]];
 then
 	printf "*** Error - $vol not found\n"
