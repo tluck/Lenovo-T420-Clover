@@ -146,7 +146,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>slide=0 -no_compat_check -lilubetaall -alcbeta</string>
+		<string>slide=0 -no_compat_check -lilubetaall -alcbeta -wegdbg amfi_get_out_of_my_way=0x1</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -369,7 +369,7 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x3C3</string>
+		<string>0x3E7</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
