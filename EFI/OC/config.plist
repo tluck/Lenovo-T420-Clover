@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Power Management </string>
+				<string>Power Management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -24,7 +24,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Power Management </string>
+				<string>Power Management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -325,7 +325,7 @@
 	</dict>
 	<key>Booter</key>
 	<dict>
-		<key>#MmioWhitelist</key>
+		<key>MmioWhitelist</key>
 		<array/>
 		<key>Quirks</key>
 		<dict>
@@ -1154,7 +1154,7 @@
 			<key>AudioDevice</key>
 			<string>PciRoot(0x0)/Pci(0x1B,0x0)</string>
 			<key>AudioOut</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>AudioSupport</key>
 			<true/>
 			<key>MinimumVolume</key>
@@ -1162,7 +1162,7 @@
 			<key>PlayChime</key>
 			<true/>
 			<key>VolumeAmplifier</key>
-			<integer>0</integer>
+			<integer>120</integer>
 		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
@@ -1220,7 +1220,7 @@
 			<key>ReplaceTabWithSpace</key>
 			<false/>
 			<key>Resolution</key>
-			<string>1600x900</string>
+			<string>Max</string>
 			<key>SanitiseClearScreen</key>
 			<false/>
 			<key>TextRenderer</key>
