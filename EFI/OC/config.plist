@@ -24,14 +24,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Power Management</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-CpuCst.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>SSDT-PNLF-Backlight</string>
 				<key>Enabled</key>
 				<true/>
@@ -72,7 +64,7 @@
 				<integer>0</integer>
 				<key>TableSignature</key>
 				<data>
-				VERTUw==
+				U1NEVA==
 				</data>
 			</dict>
 			<dict>
@@ -90,79 +82,7 @@
 				<integer>0</integer>
 				<key>TableSignature</key>
 				<data>
-				VERTUw==
-				</data>
-			</dict>
-			<dict>
-				<key>All</key>
-				<true/>
-				<key>Comment</key>
-				<string>Drop CpuCst</string>
-				<key>Enabled</key>
-				<true/>
-				<key>OemTableId</key>
-				<data>
-				Q3B1Q3N0AA==
-				</data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				VERTUw==
-				</data>
-			</dict>
-			<dict>
-				<key>All</key>
-				<true/>
-				<key>Comment</key>
-				<string>Drop Cpu0Cst</string>
-				<key>Enabled</key>
-				<true/>
-				<key>OemTableId</key>
-				<data>
-				Q3B1MENzdAA=
-				</data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				VERTUw==
-				</data>
-			</dict>
-			<dict>
-				<key>All</key>
-				<true/>
-				<key>Comment</key>
-				<string>Drop ApTst</string>
-				<key>Enabled</key>
-				<false/>
-				<key>OemTableId</key>
-				<data>
-				QXBUc3QA
-				</data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				VERTUw==
-				</data>
-			</dict>
-			<dict>
-				<key>All</key>
-				<true/>
-				<key>Comment</key>
-				<string>Drop Cpu0Tst</string>
-				<key>Enabled</key>
-				<true/>
-				<key>OemTableId</key>
-				<data>
-				Q3B1MFRzdA==
-				</data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				VERTUw==
+				U1NEVA==
 				</data>
 			</dict>
 			<dict>
@@ -180,7 +100,7 @@
 				<integer>0</integer>
 				<key>TableSignature</key>
 				<data>
-				VERTUw==
+				U1NEVA==
 				</data>
 			</dict>
 			<dict>
@@ -198,117 +118,12 @@
 				<integer>0</integer>
 				<key>TableSignature</key>
 				<data>
-				VERTUw==
-				</data>
-			</dict>
-			<dict>
-				<key>All</key>
-				<true/>
-				<key>Comment</key>
-				<string>Drop TP-SSDT2</string>
-				<key>Enabled</key>
-				<true/>
-				<key>OemTableId</key>
-				<data>
-				VFAtU1NEVDI=
-				</data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				VERTUw==
-				</data>
-			</dict>
-			<dict>
-				<key>All</key>
-				<true/>
-				<key>Comment</key>
-				<string>Drop Dmar</string>
-				<key>Enabled</key>
-				<true/>
-				<key>OemTableId</key>
-				<data>
-				RE1BUg==
-				</data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				UkFNRA==
+				U1NEVA==
 				</data>
 			</dict>
 		</array>
 		<key>Patch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>_Q11 to XQ11</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				X1ExMQ==
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>OemTableId</key>
-				<data>
-				</data>
-				<key>Replace</key>
-				<data>
-				WFExMQ==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>_Q12 to XQ12</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				X1ExMg==
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>OemTableId</key>
-				<data>
-				</data>
-				<key>Replace</key>
-				<data>
-				WFExMg==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				</data>
-			</dict>
-		</array>
+		<array/>
 		<key>Quirks</key>
 		<dict>
 			<key>FadtEnableReset</key>
@@ -826,7 +641,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string></string>
+				<string>Convert 4th Framebuffer into VGA port</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -837,7 +652,7 @@
 				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
 				</data>
 				<key>Identifier</key>
-				<string>AppleIntelSNBGraphicsFB</string>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -849,42 +664,8 @@
 				<string></string>
 				<key>Replace</key>
 				<data>
-				AQIEABITAAASEwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
+				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
 				AAAAAwQAAAAEAAAJAAAABgIAABAAAAAJAAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				QVBQTEUgU1NE
-				</data>
-				<key>Identifier</key>
-				<string>IOAHCIBlockStorage</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAA
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -946,7 +727,7 @@
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PickerMode</key>
-			<string>Builtin</string>
+			<string>External</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -967,7 +748,7 @@
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
 			<key>Target</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Entries</key>
 		<array/>
@@ -1162,7 +943,7 @@
 			<key>PlayChime</key>
 			<true/>
 			<key>VolumeAmplifier</key>
-			<integer>120</integer>
+			<integer>100</integer>
 		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
@@ -1172,7 +953,7 @@
 			<string>OpenRuntime.efi</string>
 			<string>VirtualSmc.efi</string>
 			<string>AudioDxe.efi</string>
-			<string>#OpenCanopy.efi</string>
+			<string>OpenCanopy.efi</string>
 			<string>#OpenUsbKbDxe.efi</string>
 			<string>#UsbMouseDxe.efi</string>
 			<string>#Ps2KeyboardDxe.efi</string>
