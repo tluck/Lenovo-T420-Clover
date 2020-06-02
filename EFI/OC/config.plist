@@ -407,6 +407,54 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>USBInjectAll.kext</string>
+				<key>Comment</key>
+				<string>USBInjectAll</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/USBInjectAll</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>#ExecutablePath</key>
+				<string>Contents/MacOS/</string>
+				<key>BundlePath</key>
+				<string>EFICheckDisabler.kext</string>
+				<key>Comment</key>
+				<string>EFICheckDisabler</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>#ExecutablePath</key>
+				<string>Contents/MacOS/</string>
+				<key>BundlePath</key>
+				<string>BlueTooth_Injector_T420.kext</string>
+				<key>Comment</key>
+				<string>BlueTooth_Injector_T420</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
 		</array>
 		<key>Block</key>
 		<array>
@@ -767,7 +815,7 @@
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>ScanPolicy</key>
-			<integer>983299</integer>
+			<integer>2163459</integer>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -786,20 +834,6 @@
 				<string>UEFI Shell</string>
 				<key>Path</key>
 				<string>OpenShell.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string>Shutdown</string>
-				<key>Auxiliary</key>
-				<true/>
-				<key>Comment</key>
-				<string>Perform shutdown</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Name</key>
-				<string>Shutdown</string>
-				<key>Path</key>
-				<string>ResetSystem.efi</string>
 			</dict>
 		</array>
 	</dict>
@@ -825,7 +859,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>slide=0 -no_compat_check amfi_get_out_of_my_way=0x1</string>
+				<string>slide=0 alcid=14 -no_compat_check amfi_get_out_of_my_way=0x1</string>
 				<key>csr-active-config</key>
 				<data>
 				5wMAAA==
@@ -943,15 +977,14 @@
 			<key>PlayChime</key>
 			<true/>
 			<key>VolumeAmplifier</key>
-			<integer>100</integer>
+			<integer>120</integer>
 		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>VBoxHfs.efi</string>
+			<string>HfsPlusLegacy.efi</string>
 			<string>OpenRuntime.efi</string>
-			<string>VirtualSmc.efi</string>
 			<string>AudioDxe.efi</string>
 			<string>OpenCanopy.efi</string>
 			<string>#OpenUsbKbDxe.efi</string>
@@ -960,6 +993,7 @@
 			<string>#Ps2MouseDxe.efi</string>
 			<string>#HiiDatabase.efi</string>
 			<string>#XhciDxe.efi</string>
+			<string>#VirtualSmc.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
