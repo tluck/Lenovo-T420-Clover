@@ -229,6 +229,8 @@
 				</dict>
 			</array>
 		</dict>
+		<key>EmbeddedThemeType</key>
+		<string>Daytime</string>
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
@@ -242,6 +244,8 @@
 			<key>Speed</key>
 			<integer>8</integer>
 		</dict>
+		<key>PlayAsync</key>
+		<true/>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
@@ -253,8 +257,12 @@
 			<key>Tool</key>
 			<true/>
 		</dict>
+		<key>ScreenResolution</key>
+		<string>960x600</string>
 		<key>Theme</key>
 		<string>ThinkPad</string>
+		<key>#Timezone</key>
+		<integer>-8</integer>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -263,7 +271,7 @@
 		<key>EDID</key>
 		<dict>
 			<key>Comment</key>
-			<string>LCD1366x768</string>
+			<string>LCD 1366x768</string>
 			<key>Custom</key>
 			<data>
 			AP///////wAGrzwxAAAAAAAUAQOAHxF4ChC2l1hXkiYeUFQAAAAB
@@ -324,6 +332,24 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>fix IO error ICH10 for 10.15, credit vit9696</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				QGACAA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleAHCIPort</string>
+				<key>Replace</key>
+				<data>
+				AAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>fix IO error ICH10 for 10.13, credit SunKi</string>
 				<key>Disabled</key>
 				<false/>
@@ -332,7 +358,7 @@
 				RYX2D5XCiciD4P5mhcl4D4TSdQs=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x,10.15.x</string>
+				<string>10.13.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Replace</key>
@@ -350,12 +376,48 @@
 				icglQGACAD1AIAAAdQyB4b9///+Ji1EBAAA=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x,10.15.x</string>
+				<string>10.13.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Replace</key>
 				<data>
 				kJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>1024MB memory</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				x0XQAAAAIA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.13.x,10.14.x,10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
+				<key>Replace</key>
+				<data>
+				x0XQAAAAQA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Sierra 1024MB memory</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				x0XEAAAAIA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
+				<key>Replace</key>
+				<data>
+				x0XEAAAAQA==
 				</data>
 			</dict>
 		</array>
