@@ -213,6 +213,8 @@
 	</array>
 	<key>GUI</key>
 	<dict>
+		<key>#Timezone</key>
+		<integer>-8</integer>
 		<key>Custom</key>
 		<dict>
 			<key>Comment</key>
@@ -261,8 +263,6 @@
 		<string>960x600</string>
 		<key>Theme</key>
 		<string>ThinkPad</string>
-		<key>#Timezone</key>
-		<integer>-8</integer>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -424,14 +424,14 @@
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>#MLB</key>
-		<string>C1234567890123456</string>
-		<key>#ROM</key>
-		<string>c12345678901</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x3E7</string>
+		<key>MLB</key>
+		<string>C1234567890123456</string>
+		<key>ROM</key>
+		<string>UseMacAddr0</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
