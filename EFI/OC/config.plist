@@ -715,6 +715,8 @@
 			<integer>2147483648</integer>
 			<key>ScanPolicy</key>
 			<integer>2163459</integer>
+			<key>SecureBootModel</key>
+			<string>Disabled</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
