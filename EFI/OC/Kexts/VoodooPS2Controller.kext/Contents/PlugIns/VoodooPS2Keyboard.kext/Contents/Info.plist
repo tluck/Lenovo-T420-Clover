@@ -744,7 +744,7 @@
 	</dict>
 	<key>OSBundleLibraries</key>
 	<dict>
-		<key>com.apple.iokit.IOHIDSystem</key>
+		<key>com.apple.iokit.IOHIDFamily</key>
 		<string>1.1</string>
 		<key>com.apple.kpi.bsd</key>
 		<string>8.0.0</string>

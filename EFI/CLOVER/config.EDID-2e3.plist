@@ -190,8 +190,6 @@
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
-		<key>Inject</key>
-		<false/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -213,6 +211,8 @@
 	</array>
 	<key>GUI</key>
 	<dict>
+		<key>#Timezone</key>
+		<integer>-8</integer>
 		<key>Custom</key>
 		<dict>
 			<key>Comment</key>
@@ -261,8 +261,6 @@
 		<string>960x600</string>
 		<key>Theme</key>
 		<string>ThinkPad</string>
-		<key>#Timezone</key>
-		<integer>-8</integer>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -422,16 +420,91 @@
 			</dict>
 		</array>
 	</dict>
+	<key>Quirks</key>
+	<dict>
+		<key>AppleCpuPmCfgLock</key>
+		<true/>
+		<key>AppleXcpmCfgLock</key>
+		<false/>
+		<key>AppleXcpmExtraMsrs</key>
+		<false/>
+		<key>AppleXcpmForceBoost</key>
+		<false/>
+		<key>AvoidRuntimeDefrag</key>
+		<true/>
+		<key>CustomSMBIOSGuid</key>
+		<false/>
+		<key>DevirtualiseMmio</key>
+		<true/>
+		<key>DisableIoMapper</key>
+		<true/>
+		<key>DisableLinkeditJettison</key>
+		<true/>
+		<key>DisableRtcChecksum</key>
+		<true/>
+		<key>DisableSingleUser</key>
+		<false/>
+		<key>DisableVariableWrite</key>
+		<false/>
+		<key>DiscardHibernateMap</key>
+		<false/>
+		<key>DummyPowerManagement</key>
+		<false/>
+		<key>EnableSafeModeSlide</key>
+		<true/>
+		<key>EnableWriteUnprotector</key>
+		<true/>
+		<key>ExternalDiskIcons</key>
+		<false/>
+		<key>ForceExitBootServices</key>
+		<false/>
+		<key>FuzzyMatch</key>
+		<true/>
+		<key>IncreasePciBarSize</key>
+		<false/>
+		<key>KernelCache</key>
+		<string>Auto</string>
+		<key>LapicKernelPanic</key>
+		<false/>
+		<key>PanicNoKextDump</key>
+		<true/>
+		<key>PowerTimeoutKernelPanic</key>
+		<true/>
+		<key>ProtectMemoryRegions</key>
+		<false/>
+		<key>ProtectSecureBoot</key>
+		<false/>
+		<key>ProtectUefiServices</key>
+		<false/>
+		<key>ProvideConsoleGopEnable</key>
+		<true/>
+		<key>ProvideCustomSlide</key>
+		<true/>
+		<key>ProvideMaxSlide</key>
+		<integer>0</integer>
+		<key>RebuildAppleMemoryMap</key>
+		<true/>
+		<key>SetupVirtualMap</key>
+		<true/>
+		<key>SignalAppleOS</key>
+		<false/>
+		<key>SyncRuntimePermissions</key>
+		<true/>
+		<key>ThirdPartyDrives</key>
+		<true/>
+		<key>XhciPortLimit</key>
+		<false/>
+	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>MLB</key>
-		<string>C1234567890123456</string>
-		<key>ROM</key>
-		<string>UseMacAddr0</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x3E7</string>
+		<key>MLB</key>
+		<string>C1234567890123456</string>
+		<key>ROM</key>
+		<string>UseMacAddr0</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
