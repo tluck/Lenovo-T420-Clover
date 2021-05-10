@@ -8,94 +8,11 @@
 		<dict>
 			<key>Debug</key>
 			<false/>
-			<key>DropOEM_DSM</key>
-			<dict>
-				<key>ATI</key>
-				<false/>
-				<key>Firewire</key>
-				<false/>
-				<key>HDA</key>
-				<false/>
-				<key>HDMI</key>
-				<false/>
-				<key>IDE</key>
-				<false/>
-				<key>IntelGFX</key>
-				<false/>
-				<key>LAN</key>
-				<false/>
-				<key>LPC</key>
-				<false/>
-				<key>NVidia</key>
-				<false/>
-				<key>SATA</key>
-				<false/>
-				<key>SmBUS</key>
-				<false/>
-				<key>USB</key>
-				<false/>
-				<key>WIFI</key>
-				<false/>
-			</dict>
 			<key>Fixes</key>
 			<dict>
-				<key>AddDTGP_0001</key>
-				<false/>
-				<key>AddHDMI_8000000</key>
-				<false/>
-				<key>AddIMEI_80000</key>
-				<false/>
-				<key>AddMCHC_0008</key>
-				<false/>
-				<key>AddPNLF_1000000</key>
-				<false/>
-				<key>DeleteUnused_400000</key>
-				<false/>
-				<key>FIX_ACST_4000000</key>
-				<false/>
-				<key>FIX_ADP1_800000</key>
-				<false/>
-				<key>FIX_INTELGFX_100000</key>
-				<false/>
-				<key>FIX_RTC_20000</key>
-				<false/>
-				<key>FIX_S3D_2000000</key>
-				<false/>
-				<key>FIX_TMR_40000</key>
-				<false/>
-				<key>FIX_WAK_200000</key>
-				<false/>
-				<key>FakeLPC_0020</key>
-				<false/>
-				<key>FixAirport_4000</key>
-				<false/>
-				<key>FixDarwin_0002</key>
-				<false/>
-				<key>FixDisplay_0100</key>
-				<false/>
-				<key>FixFirewire_0800</key>
-				<false/>
-				<key>FixHDA_8000</key>
-				<false/>
-				<key>FixHPET_0010</key>
-				<false/>
-				<key>FixIDE_0200</key>
-				<false/>
-				<key>FixIPIC_0040</key>
-				<false/>
-				<key>FixLAN_2000</key>
-				<false/>
 				<key>FixRegions_10000000</key>
 				<true/>
-				<key>FixSATA_0400</key>
-				<false/>
-				<key>FixSBUS_0080</key>
-				<false/>
-				<key>FixShutdown_0004</key>
-				<false/>
-				<key>FixUSB_1000</key>
-				<false/>
-				<key>NewWay_80000000</key>
+				<key>#NewWay_80000000</key>
 				<true/>
 			</dict>
 			<key>Name</key>
@@ -155,7 +72,7 @@
 		<string>macOS</string>
 		<key>Fast</key>
 		<false/>
-		<key>IgnoreNVRAMBoot</key>
+		<key>#IgnoreNVRAMBoot</key>
 		<false/>
 		<key>NoEarlyProgress</key>
 		<true/>
@@ -163,7 +80,7 @@
 		<true/>
 		<key>Timeout</key>
 		<integer>5</integer>
-		<key>UseAlternateLogo</key>
+		<key>#UseAlternateLogo</key>
 		<true/>
 		<key>XMPDetection</key>
 		<false/>
@@ -179,7 +96,7 @@
 				<string>AAPL00,DualLink</string>
 				<key>Value</key>
 				<data>
-				AAAAAA==
+				AQAAAA==
 				</data>
 			</dict>
 		</array>
@@ -190,8 +107,6 @@
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
-		<key>Inject</key>
-		<false/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -217,7 +132,7 @@
 		<integer>-8</integer>
 		<key>Custom</key>
 		<dict>
-			<key>Comment</key>
+			<key>#Comment</key>
 			<string>Windows Entries</string>
 			<key>Entries</key>
 			<array>
@@ -239,7 +154,7 @@
 		</array>
 		<key>Mouse</key>
 		<dict>
-			<key>DoubleClick</key>
+			<key>#DoubleClick</key>
 			<integer>500</integer>
 			<key>Enabled</key>
 			<false/>
@@ -280,12 +195,12 @@
 			WFhYWFhYMSAKACM=
 			</data>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
@@ -424,9 +339,9 @@
 	</dict>
 	<key>Quirks</key>
 	<dict>
-		<key>AppleCpuPmCfgLock</key>
+		<key>#AppleCpuPmCfgLock</key>
 		<true/>
-		<key>AppleXcpmCfgLock</key>
+		<key>#AppleXcpmCfgLock</key>
 		<false/>
 		<key>AppleXcpmExtraMsrs</key>
 		<false/>
@@ -434,15 +349,15 @@
 		<false/>
 		<key>AvoidRuntimeDefrag</key>
 		<true/>
-		<key>CustomSMBIOSGuid</key>
+		<key>#CustomSMBIOSGuid</key>
 		<false/>
 		<key>DevirtualiseMmio</key>
 		<true/>
 		<key>DisableIoMapper</key>
-		<false/>
+		<true/>
 		<key>DisableLinkeditJettison</key>
 		<true/>
-		<key>DisableRtcChecksum</key>
+		<key>#DisableRtcChecksum</key>
 		<true/>
 		<key>DisableSingleUser</key>
 		<false/>
@@ -466,9 +381,9 @@
 		<false/>
 		<key>KernelCache</key>
 		<string>Auto</string>
-		<key>LapicKernelPanic</key>
+		<key>#LapicKernelPanic</key>
 		<false/>
-		<key>PanicNoKextDump</key>
+		<key>#PanicNoKextDump</key>
 		<true/>
 		<key>PowerTimeoutKernelPanic</key>
 		<true/>
@@ -478,7 +393,7 @@
 		<false/>
 		<key>ProtectUefiServices</key>
 		<false/>
-		<key>ProvideConsoleGopEnable</key>
+		<key>#ProvideConsoleGopEnable</key>
 		<true/>
 		<key>ProvideCustomSlide</key>
 		<true/>
@@ -493,7 +408,7 @@
 		<key>SyncRuntimePermissions</key>
 		<true/>
 		<key>ThirdPartyDrives</key>
-		<false/>
+		<true/>
 		<key>XhciPortLimit</key>
 		<false/>
 	</dict>
