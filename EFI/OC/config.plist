@@ -184,13 +184,9 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
 			<dict>
-				<key>alc-layout-id</key>
-				<data>
-				DgAAAA==
-				</data>
 				<key>layout-id</key>
 				<data>
-				BwAAAA==
+				DgAAAA==
 				</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
@@ -756,7 +752,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>slide=0 alcid=14 -no_compat_check amfi_get_out_of_my_way=0x1</string>
+				<string>slide=0 -no_compat_check amfi_get_out_of_my_way=0x1</string>
 				<key>csr-active-config</key>
 				<data>
 				5wMAAA==
@@ -864,7 +860,7 @@
 			<key>AppleEvent</key>
 			<string>Builtin</string>
 			<key>CustomDelays</key>
-			<string>Auto</string>
+			<false/>
 			<key>KeyInitialDelay</key>
 			<integer>0</integer>
 			<key>KeySubsequentDelay</key>
