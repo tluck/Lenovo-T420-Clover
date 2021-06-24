@@ -1,6 +1,6 @@
-# Lenovo-T420-Clover
+# Lenovo T420 Clover
 
-This repo contains the files and scripts to install macOS on the Lenovo T420
+This repo contains the files and scripts to install macOS on the Lenovo T420 family - T420 T420s T420i T520 X220
 
 Refer to this Guide for the details: 
 
