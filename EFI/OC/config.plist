@@ -662,11 +662,13 @@
 			<key>HideAuxiliary</key>
 			<false/>
 			<key>PickerAttributes</key>
-			<integer>1</integer>
+			<integer>144</integer>
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PickerMode</key>
 			<string>External</string>
+			<key>PickerVariant</key>
+			<string>Auto</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -702,7 +704,7 @@
 			<key>AuthRestart</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
-			<integer>3</integer>
+			<integer>7</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>ScanPolicy</key>
@@ -1101,6 +1103,8 @@
 			<true/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
+			<key>ForceOcWriteFlash</key>
+			<true/>
 			<key>IgnoreInvalidFlexRatio</key>
 			<true/>
 			<key>ReleaseUsbOwnership</key>

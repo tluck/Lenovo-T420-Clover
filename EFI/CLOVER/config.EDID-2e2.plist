@@ -375,6 +375,8 @@
 		<false/>
 		<key>ForceExitBootServices</key>
 		<false/>
+                <key>ForceOcWriteFlash</key>
+                <true/>
 		<key>FuzzyMatch</key>
 		<true/>
 		<key>IncreasePciBarSize</key>
