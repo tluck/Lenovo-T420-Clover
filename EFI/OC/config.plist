@@ -878,16 +878,18 @@
 			<integer>0</integer>
 			<key>AudioDevice</key>
 			<string>PciRoot(0x0)/Pci(0x1B,0x0)</string>
-			<key>AudioOut</key>
-			<integer>1</integer>
+			<key>AudioOutMask</key>
+			<integer>-1</integer>
 			<key>AudioSupport</key>
 			<true/>
-			<key>MinimumVolume</key>
-			<integer>20</integer>
+			<key>MaximumGain</key>
+			<integer>-15</integer>
+			<key>MinimumAssistGain</key>
+			<integer>-30</integer>
+			<key>MinimumAudibleGain</key>
+			<integer>-55</integer>
 			<key>PlayChime</key>
-			<string>Auto</string>
-			<key>VolumeAmplifier</key>
-			<integer>120</integer>
+			<string>Enabled</string>
 		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
