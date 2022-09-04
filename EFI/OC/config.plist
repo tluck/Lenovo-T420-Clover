@@ -775,7 +775,7 @@
 				<string>csr-active-config</string>
 			</array>
 		</dict>
-		<key>LegacyEnable</key>
+		<key>#LegacyEnable</key>
 		<false/>
 		<key>LegacyOverwrite</key>
 		<false/>
